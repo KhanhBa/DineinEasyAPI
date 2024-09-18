@@ -15,7 +15,9 @@ namespace DineinEasy.API
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             // Add services to the container.
             builder.Services.AddControllers();
-            builder.Services.AddScoped<IAreaService, AreaService>();
+            builder.Services.AddScoped<IAreaService,AreaService>();
+            builder.Services.AddScoped<ICategoryService,CategoryService>();
+            builder.Services.AddScoped<IPackageService, PackageService>();
             builder.Services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());

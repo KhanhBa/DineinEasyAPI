@@ -11,12 +11,10 @@ namespace DineinEasy.API.Controllers
     [ApiController]
     public class AreaController : Controller
     {
-        public IMapper _mapper { get; set; }
         public IAreaService _areaService { get; set; }
-        public AreaController(IAreaService areaService, IMapper mapper)
+        public AreaController(IAreaService areaService)
         {
             _areaService = areaService;
-            _mapper = mapper;
         }
         [HttpGet("areas")]
         public async Task<ActionResult<IBusinessResult>> GetAllArea()
@@ -52,6 +50,32 @@ namespace DineinEasy.API.Controllers
             {
                 var area = new AreaModel { City = areaDto.City, District = areaDto.District, Ward = areaDto.Ward, Status = areaDto.Status };
                 var result = await _areaService.UpdateArea(id,area);
+                return StatusCode(result.Status, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpGet("area/{id}")]
+        public async Task<ActionResult<IBusinessResult>> GetAreaByid([FromRoute] int id)
+        {
+            try
+            {
+                var result = await _areaService.GetAreaById(id);
+                return StatusCode(result.Status, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpDelete("area/{id}")]
+        public async Task<ActionResult<IBusinessResult>> DeleteAreaByid([FromRoute] int id)
+        {
+            try
+            {
+                var result = await _areaService.DeleteAreabyId(id);
                 return StatusCode(result.Status, result);
             }
             catch (Exception ex)

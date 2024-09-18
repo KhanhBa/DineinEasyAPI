@@ -17,6 +17,8 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> GetAllArea();
         Task<IBusinessResult> CreateArea(AreaModel areaModel);
         Task<IBusinessResult> UpdateArea(int Id,AreaModel areaModel);
+        Task<IBusinessResult> GetAreaById(int id);
+        Task<IBusinessResult> DeleteAreabyId(int id);
     }
     public class AreaService:IAreaService
     {
@@ -37,16 +39,36 @@ namespace DineinEasy.Service.Services
         {
             var area = _mapper.Map<Area>(areaModel);
             area.Status = true;
-            var result = await _unitOfWork.AreaRepository.CreateAsync(area);
+            var created = await _unitOfWork.AreaRepository.CreateAsync(area);
+            var result = _mapper.Map<AreaModel>(created);
             return new BusinessResult(200,"Create successfully",result);
         }
         public async Task<IBusinessResult> UpdateArea(int Id, AreaModel areaModel)
         {
             var area = await _unitOfWork.AreaRepository.GetByIdAsync(Id);
             if (area == null) {return new BusinessResult(404, "Can not find Area");}
-            _mapper.Map(areaModel,area);
-            var result = await _unitOfWork.AreaRepository.UpdateAsync(area);
+            _mapper.Map(areaModel, area);
+            var updated = await _unitOfWork.AreaRepository.UpdateAsync(area);
+            var result = _mapper.Map<AreaModel>(area);
             return new BusinessResult(200, "Update successfully", result);
+        }
+
+        public async Task<IBusinessResult> GetAreaById(int id)
+        {
+            var area = await _unitOfWork.AreaRepository.GetByIdAsync(id);
+            if (area == null)
+            { return new BusinessResult(404, "Can not find Area");}
+            var result = _mapper.Map<AreaModel>(area);
+            return new BusinessResult(200, "Get area by Id successfully", result);
+            }
+
+        public async Task<IBusinessResult> DeleteAreabyId(int id)
+        {
+            var area = await _unitOfWork.AreaRepository.GetByIdAsync(id);
+            if (area == null)
+            { return new BusinessResult(404, "Can not find Area"); }
+            var result = await _unitOfWork.AreaRepository.RemoveAsync(area);
+            return new BusinessResult(200, "Delete area by Id successfully", result);
         }
     }
 }

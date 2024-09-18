@@ -16,6 +16,7 @@ namespace DineinEasy.Service.Mappers
             UserProfile();
             PackageProfile();
             AreaProfile();
+            CategoryProfile();
         }
         public void UserProfile()
         {
@@ -23,11 +24,18 @@ namespace DineinEasy.Service.Mappers
         }
         public void PackageProfile()
         {
-            CreateMap<Package, PackageModel>().ReverseMap();
+            CreateMap<Package, PackageModel>().ReverseMap()
+                .ForMember(dest => dest.Id, opt => opt.Ignore());
         }
         public void AreaProfile()
         {
-            CreateMap<Area, AreaModel>().ReverseMap();
+            CreateMap<Area, AreaModel>().ReverseMap()
+                .ForMember(dest => dest.Id, opt => opt.Ignore()); ;
+        }
+        public void CategoryProfile()
+        {
+            CreateMap<Category,CategoryModel>().ReverseMap()
+                 .ForMember(dest => dest.Id, opt => opt.Ignore());
         }
     }
 }

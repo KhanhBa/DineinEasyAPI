@@ -14,4 +14,8 @@
     <ProjectReference Include="..\DineinEasy.Service\DineinEasy.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="RequestDTO\Customer\" />
+  </ItemGroup>
+
 </Project>

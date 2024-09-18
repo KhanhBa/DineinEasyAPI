@@ -67,7 +67,7 @@ namespace DineinEasy.Data.UnitOfWork
                 return _orderMembership ??= new OrderMembershipRepository();
             }
         }
-        public PackageRepository packageRepository
+        public PackageRepository PackageRepository
         {
             get
             {

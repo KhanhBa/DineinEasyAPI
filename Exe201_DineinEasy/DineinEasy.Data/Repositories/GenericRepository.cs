@@ -98,10 +98,11 @@ namespace DineinEasy.Data.Repositories
             _context.SaveChanges();
         }
 
-        public async Task<int> CreateAsync(T entity)
+        public async Task<T> CreateAsync(T entity)
         {
-            _context.AddAsync(entity);
-            return await _context.SaveChangesAsync();
+            var result = await _context.AddAsync(entity);
+            await _context.SaveChangesAsync();
+            return result.Entity;
         }
 
         public void Update(T entity)

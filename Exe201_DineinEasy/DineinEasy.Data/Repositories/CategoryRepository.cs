@@ -9,7 +9,7 @@ namespace DineinEasy.Data.Repositories
 {
     public class CategoryRepository:GenericRepository<Category>
     {
-       public CategoryRepository() { }
+    public CategoryRepository() { }
     public CategoryRepository(EXE2_DineinEasyContext context)
         {
             _context = context;

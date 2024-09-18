@@ -1,0 +1,79 @@
+[
+  {
+    "ContainingType": "DineinEasy.API.Controllers.AreaController",
+    "Method": "UpdateArea",
+    "RelativePath": "area/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "areaDto",
+        "Type": "DineinEasy.API.RequestDTO.Area.UpdatedAreaDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DineinEasy.Service.Responses.IBusinessResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DineinEasy.API.Controllers.AreaController",
+    "Method": "GetAllArea",
+    "RelativePath": "areas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "DineinEasy.Service.Responses.IBusinessResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DineinEasy.API.Controllers.AreaController",
+    "Method": "CreateArea",
+    "RelativePath": "areas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "areaDto",
+        "Type": "DineinEasy.API.RequestDTO.Area.CreatedAreaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DineinEasy.Service.Responses.IBusinessResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

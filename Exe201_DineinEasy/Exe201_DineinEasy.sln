@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DineinEasy.Data", "DineinEasy.Data\DineinEasy.Data.csproj", "{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DineinEasy.Service", "DineinEasy.Service\DineinEasy.Service.csproj", "{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DineinEasy.Service", "DineinEasy.Service\DineinEasy.Service.csproj", "{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DineinEasy.API", "DineinEasy.API\DineinEasy.API.csproj", "{C9C2B1DC-1891-43F2-8127-84340D709B80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C2B1DC-1891-43F2-8127-84340D709B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C2B1DC-1891-43F2-8127-84340D709B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C2B1DC-1891-43F2-8127-84340D709B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C2B1DC-1891-43F2-8127-84340D709B80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

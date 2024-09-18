@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace DineinEasy.Data.Models;
 
@@ -44,6 +45,19 @@ public partial class EXE2_DineinEasyContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
+    public static string GetConnectionString(string connectionStringName)
+    {
+        var config = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+        string connectionString = config.GetConnectionString(connectionStringName);
+        return connectionString;
+    }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection"));
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Area>(entity =>
@@ -52,7 +66,6 @@ public partial class EXE2_DineinEasyContext : DbContext
 
             entity.ToTable("Area");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.City)
                 .IsRequired()
                 .HasMaxLength(50);
@@ -68,7 +81,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Banner");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.CreatedAt).HasColumnType("datetime");
             entity.Property(e => e.ExpriedDate).HasColumnType("datetime");
         });
@@ -77,7 +89,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Category");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Description).IsRequired();
             entity.Property(e => e.Name)
                 .IsRequired()
@@ -88,7 +99,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Customer");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.CreateAt).HasColumnType("datetime");
             entity.Property(e => e.Email).IsRequired();
             entity.Property(e => e.ImageUrl).IsRequired();
@@ -106,7 +116,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Notification");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Body).IsRequired();
             entity.Property(e => e.CreatedAt).HasColumnType("datetime");
             entity.Property(e => e.ImageUrl).IsRequired();
@@ -125,7 +134,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("OrderBooking");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.BookingDate).HasColumnType("datetime");
             entity.Property(e => e.BookingTime).HasColumnType("datetime");
             entity.Property(e => e.CreatedAt).HasColumnType("datetime");
@@ -143,7 +151,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("OrderMembership");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.CreatedDate).HasColumnType("datetime");
             entity.Property(e => e.Description).IsRequired();
             entity.Property(e => e.ExpiredDate).HasColumnType("datetime");
@@ -167,7 +174,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Package");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.CreateAt).HasColumnType("datetime");
             entity.Property(e => e.Description).IsRequired();
             entity.Property(e => e.ImageUrl).IsRequired();
@@ -180,7 +186,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Restaurant");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Address).IsRequired();
             entity.Property(e => e.Avatar).IsRequired();
             entity.Property(e => e.CreateAt).IsRequired();
@@ -208,8 +213,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("RestaurantImage");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
-
             entity.HasOne(d => d.Restaurant).WithMany(p => p.RestaurantImages)
                 .HasForeignKey(d => d.RestaurantId)
                 .HasConstraintName("FK_RestaurantImage_Restaurant");
@@ -219,7 +222,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Review");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Content).IsRequired();
             entity.Property(e => e.CreateAt).HasColumnType("datetime");
             entity.Property(e => e.Status).HasColumnName("status");
@@ -239,7 +241,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("ReviewImage");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.ImageUrl).IsRequired();
 
             entity.HasOne(d => d.Review).WithMany(p => p.ReviewImages)
@@ -251,8 +252,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<SavedRestaurant>(entity =>
         {
             entity.ToTable("SavedRestaurant");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
 
             entity.HasOne(d => d.Custmer).WithMany(p => p.SavedRestaurants)
                 .HasForeignKey(d => d.CustmerId)
@@ -268,8 +267,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<TimeFrame>(entity =>
         {
             entity.ToTable("TimeFrame");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Day)
                 .IsRequired()
                 .HasMaxLength(50);

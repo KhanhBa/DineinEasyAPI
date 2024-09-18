@@ -23,6 +23,7 @@ namespace DineinEasy.Data.UnitOfWork
         private SavedRestaurantRepository _savedRestaurant;
         private TimeFrameRepository _timeFrame;
         private UserRepository _user;
+        private AreaRepository _area;
         public UnitOfWork()
         {
             _context ??= new EXE2_DineinEasyContext();
@@ -113,6 +114,13 @@ namespace DineinEasy.Data.UnitOfWork
             get
             {
                 return _user ??= new UserRepository();
+            }
+        }
+        public AreaRepository AreaRepository
+        {
+            get
+            {
+                return _area ??= new AreaRepository();
             }
         }
     }

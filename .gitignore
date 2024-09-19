@@ -1,0 +1,58 @@
+# Thư mục và tệp hệ thống
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Thư mục và tệp build
+bin/
+obj/
+app.publish/
+out/
+
+# Thư mục log và các tệp theo dõi
+*.log
+*.nupkg
+*.snupkg
+*.cache
+*.config
+*.dsv
+
+# Tệp môi trường cục bộ
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Tệp hệ điều hành
+[Tt]humbs.db
+ehthumbs.db
+*.DS_Store
+.DS_Store
+
+# Tệp dành cho debug và phân tích
+*.pdb
+*.pidb
+*.mdb
+*.ilk
+*.ipch
+*.tlog
+
+# Tệp mã nguồn biên dịch
+*.dll
+*.exe
+*.so
+*.dylib
+*.class
+
+# Thư mục node_modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Bỏ qua thư mục build tool của dotnet
+.idea/

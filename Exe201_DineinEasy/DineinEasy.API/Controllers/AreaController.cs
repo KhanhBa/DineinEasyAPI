@@ -29,7 +29,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpPost("areas")]
+        [HttpPost("area")]
         public async Task<ActionResult<IBusinessResult>> CreateArea([FromBody] CreatedAreaDto areaDto)
         {
             try

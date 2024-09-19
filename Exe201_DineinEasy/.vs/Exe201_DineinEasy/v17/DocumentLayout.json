@@ -1,121 +1,125 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\",
+  "WorkspaceRootPath": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\services\\packageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\services\\packageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|solutionrelative:dineineasy.service\\services\\packageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\controllers\\packagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\controllers\\packagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\controllers\\packagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\package\\updatedpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\package\\updatedpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\requestdto\\package\\updatedpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\exe2_dineineasycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\exe2_dineineasycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\models\\exe2_dineineasycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\models\\categorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\models\\categorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|solutionrelative:dineineasy.service\\models\\categorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\mappers\\mapperconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\mappers\\mapperconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|solutionrelative:dineineasy.service\\mappers\\mapperconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\services\\areaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\services\\areaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|solutionrelative:dineineasy.service\\services\\areaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\category\\updatedcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\category\\updatedcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\requestdto\\category\\updatedcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\category\\createdcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\category\\createdcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\requestdto\\category\\createdcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\package\\createdpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\package\\createdpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\requestdto\\package\\createdpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\area\\updatedareadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\requestdto\\area\\updatedareadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\requestdto\\area\\updatedareadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\models\\packagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\models\\packagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|solutionrelative:dineineasy.service\\models\\packagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\repositories\\arearepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\repositories\\arearepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\repositories\\arearepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\models\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\orderbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\orderbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\models\\orderbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\banner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\models\\banner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\models\\banner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\responses\\ibusinessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\responses\\ibusinessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|solutionrelative:dineineasy.service\\responses\\ibusinessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\responses\\businessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.service\\responses\\businessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C185E87-F1C6-404F-A681-FBC5BBFC7BE9}|DineinEasy.Service\\DineinEasy.Service.csproj|solutionrelative:dineineasy.service\\responses\\businessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\dineineasy.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\dineineasy.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\dineineasy.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.data\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41B427C3-CDB1-4E2F-A7CA-3244E4A9E14C}|DineinEasy.Data\\DineinEasy.Data.csproj|solutionrelative:dineineasy.data\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -125,141 +129,150 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 94,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "DineinEasy.API\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "DineinEasy.API\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T16:11:17.607Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PackageController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\PackageController.cs",
-              "RelativeDocumentMoniker": "DineinEasy.API\\Controllers\\PackageController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\PackageController.cs",
-              "RelativeToolTip": "DineinEasy.API\\Controllers\\PackageController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAmwDQAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T16:06:16.847Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Dockerfile",
+              "RelativeDocumentMoniker": "DineinEasy.API\\Dockerfile",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Dockerfile",
+              "RelativeToolTip": "DineinEasy.API\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-09-19T01:16:14.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "DineinEasy.API\\Controllers\\CategoryController.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "DineinEasy.API\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T16:11:17.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PackageService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\PackageService.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\PackageService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\PackageService.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\PackageService.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\PackageService.cs",
               "RelativeToolTip": "DineinEasy.Service\\Services\\PackageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAsAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T15:54:16.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UpdatedCategory.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Category\\UpdatedCategory.cs",
-              "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Category\\UpdatedCategory.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Category\\UpdatedCategory.cs",
-              "RelativeToolTip": "DineinEasy.API\\RequestDTO\\Category\\UpdatedCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PackageController.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\PackageController.cs",
+              "RelativeDocumentMoniker": "DineinEasy.API\\Controllers\\PackageController.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\PackageController.cs",
+              "RelativeToolTip": "DineinEasy.API\\Controllers\\PackageController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwDQAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:15:45.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T16:06:16.847Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "CreatedCategory.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Category\\CreatedCategory.cs",
-              "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Category\\CreatedCategory.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Category\\CreatedCategory.cs",
-              "RelativeToolTip": "DineinEasy.API\\RequestDTO\\Category\\CreatedCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Title": "UpdatedCategory.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Category\\UpdatedCategory.cs",
+              "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Category\\UpdatedCategory.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Category\\UpdatedCategory.cs",
+              "RelativeToolTip": "DineinEasy.API\\RequestDTO\\Category\\UpdatedCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:15:26.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PackageModel.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\PackageModel.cs",
-              "RelativeDocumentMoniker": "DineinEasy.Service\\Models\\PackageModel.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\PackageModel.cs",
-              "RelativeToolTip": "DineinEasy.Service\\Models\\PackageModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:10:03.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UpdatedPackage.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Package\\UpdatedPackage.cs",
-              "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Package\\UpdatedPackage.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Package\\UpdatedPackage.cs",
-              "RelativeToolTip": "DineinEasy.API\\RequestDTO\\Package\\UpdatedPackage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:08:24.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T15:15:45.806Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "CreatedCategory.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Category\\CreatedCategory.cs",
+              "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Category\\CreatedCategory.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Category\\CreatedCategory.cs",
+              "RelativeToolTip": "DineinEasy.API\\RequestDTO\\Category\\CreatedCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T15:15:26.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PackageModel.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\PackageModel.cs",
+              "RelativeDocumentMoniker": "DineinEasy.Service\\Models\\PackageModel.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\PackageModel.cs",
+              "RelativeToolTip": "DineinEasy.Service\\Models\\PackageModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T15:10:03.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdatedPackage.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Package\\UpdatedPackage.cs",
+              "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Package\\UpdatedPackage.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Package\\UpdatedPackage.cs",
+              "RelativeToolTip": "DineinEasy.API\\RequestDTO\\Package\\UpdatedPackage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T15:08:24.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CreatedPackage.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Package\\CreatedPackage.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Package\\CreatedPackage.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Package\\CreatedPackage.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Package\\CreatedPackage.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Package\\CreatedPackage.cs",
               "RelativeToolTip": "DineinEasy.API\\RequestDTO\\Package\\CreatedPackage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:08:02.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T15:08:02.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CategoryModel.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\CategoryModel.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\CategoryModel.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Models\\CategoryModel.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\CategoryModel.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\CategoryModel.cs",
               "RelativeToolTip": "DineinEasy.Service\\Models\\CategoryModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T12:52:57.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T12:52:57.403Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\User.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\User.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\User.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\User.cs",
               "RelativeToolTip": "DineinEasy.Data\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -267,11 +280,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Review.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Review.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Review.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\Review.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Review.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Review.cs",
               "RelativeToolTip": "DineinEasy.Data\\Models\\Review.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -279,11 +292,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Package.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Package.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Package.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\Package.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Package.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Package.cs",
               "RelativeToolTip": "DineinEasy.Data\\Models\\Package.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -291,11 +304,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Notification.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\Notification.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Notification.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Notification.cs",
               "RelativeToolTip": "DineinEasy.Data\\Models\\Notification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -303,11 +316,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "OrderBooking.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\OrderBooking.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\OrderBooking.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\OrderBooking.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\OrderBooking.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\OrderBooking.cs",
               "RelativeToolTip": "DineinEasy.Data\\Models\\OrderBooking.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -315,24 +328,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Category.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Category.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Category.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Category.cs",
               "RelativeToolTip": "DineinEasy.Data\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T14:32:01.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T14:32:01.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Banner.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Banner.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Banner.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\Banner.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Banner.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Banner.cs",
               "RelativeToolTip": "DineinEasy.Data\\Models\\Banner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -340,37 +352,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\GenericRepository.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\GenericRepository.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\GenericRepository.cs",
               "RelativeToolTip": "DineinEasy.Data\\Repositories\\GenericRepository.cs",
               "ViewState": "AgIAAG0AAAAAAAAAAAAswHcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T14:26:59.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T14:26:59.044Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "UpdatedAreaDto.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Area\\UpdatedAreaDto.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Area\\UpdatedAreaDto.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Area\\UpdatedAreaDto.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Area\\UpdatedAreaDto.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Area\\UpdatedAreaDto.cs",
               "RelativeToolTip": "DineinEasy.API\\RequestDTO\\Area\\UpdatedAreaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T14:17:00.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T14:17:00.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Area.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Area.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Area.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\Area.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Area.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Area.cs",
               "RelativeToolTip": "DineinEasy.Data\\Models\\Area.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -378,24 +388,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "EXE2_DineinEasyContext.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\EXE2_DineinEasyContext.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\EXE2_DineinEasyContext.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\EXE2_DineinEasyContext.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\EXE2_DineinEasyContext.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\EXE2_DineinEasyContext.cs",
               "RelativeToolTip": "DineinEasy.Data\\Models\\EXE2_DineinEasyContext.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAswDoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T09:29:05.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T09:29:05.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "IBusinessResult.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Responses\\IBusinessResult.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Responses\\IBusinessResult.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Responses\\IBusinessResult.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Responses\\IBusinessResult.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Responses\\IBusinessResult.cs",
               "RelativeToolTip": "DineinEasy.Service\\Responses\\IBusinessResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -403,11 +412,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "BusinessResult.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Responses\\BusinessResult.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Responses\\BusinessResult.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Responses\\BusinessResult.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Responses\\BusinessResult.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Responses\\BusinessResult.cs",
               "RelativeToolTip": "DineinEasy.Service\\Responses\\BusinessResult.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -415,11 +424,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\appsettings.Development.json",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "DineinEasy.API\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\appsettings.Development.json",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\appsettings.Development.json",
               "RelativeToolTip": "DineinEasy.API\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -427,11 +436,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\appsettings.json",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\appsettings.json",
               "RelativeDocumentMoniker": "DineinEasy.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\appsettings.json",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\appsettings.json",
               "RelativeToolTip": "DineinEasy.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -439,11 +448,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "DineinEasy.API.http",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\DineinEasy.API.http",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\DineinEasy.API.http",
               "RelativeDocumentMoniker": "DineinEasy.API\\DineinEasy.API.http",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\DineinEasy.API.http",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\DineinEasy.API.http",
               "RelativeToolTip": "DineinEasy.API\\DineinEasy.API.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
@@ -451,11 +460,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "CustomerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\CustomerRepository.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\CustomerRepository.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Repositories\\CustomerRepository.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\CustomerRepository.cs",
               "RelativeToolTip": "DineinEasy.Data\\Repositories\\CustomerRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -463,11 +472,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AreaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\AreaRepository.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\AreaRepository.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Repositories\\AreaRepository.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\AreaRepository.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\AreaRepository.cs",
               "RelativeToolTip": "DineinEasy.Data\\Repositories\\AreaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -475,29 +484,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MapperConfigurations.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Mappers\\MapperConfigurations.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Mappers\\MapperConfigurations.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Mappers\\MapperConfigurations.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Mappers\\MapperConfigurations.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Mappers\\MapperConfigurations.cs",
               "RelativeToolTip": "DineinEasy.Service\\Mappers\\MapperConfigurations.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T08:16:40.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T08:16:40.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AreaService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\AreaService.cs",
+              "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\AreaService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\AreaService.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\AreaService.cs",
+              "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\AreaService.cs",
               "RelativeToolTip": "DineinEasy.Service\\Services\\AreaService.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAlwD4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T08:07:47.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T08:07:47.445Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 248,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 189,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

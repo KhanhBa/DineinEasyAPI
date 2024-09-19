@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("6b94f0c0-99c9-4787-a639-763ecef0f82a")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("DineinEasy.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f36a6b0f603718384053881559b45250223a665b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+332aabf3d562e9f9f0904e453237da1d5b8eccda")]
 [assembly: System.Reflection.AssemblyProductAttribute("DineinEasy.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DineinEasy.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

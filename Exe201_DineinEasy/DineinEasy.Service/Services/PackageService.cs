@@ -66,12 +66,11 @@ namespace DineinEasy.Service.Services
         }
         public async Task<IBusinessResult> UpdatePackagey(int Id, PackageModel model)
         {
-            var obj = await _unitOfWork.PackageRepository.GetByIdAsync(Id);
-            if (obj == null) { return new BusinessResult(404, "Can not find Package"); }
-            model.CreateAt = obj.CreateAt;  
+            var obj = await _unitOfWork.BannerRepository.GetByIdAsync(Id);
+            if (obj == null) { return new BusinessResult(404, "Can not find Banner"); }
             _mapper.Map(model, obj);
-            var updated = await _unitOfWork.PackageRepository.UpdateAsync(obj);
-            var result = _mapper.Map<PackageModel>(obj);
+            var updated = await _unitOfWork.BannerRepository.UpdateAsync(obj);
+            var result = _mapper.Map<BannerModel>(obj);
             return new BusinessResult(200, "Update successfully", result);
         }
     }

@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "DineinEasy.API.Controllers.AreaController",
+    "Method": "CreateArea",
+    "RelativePath": "area",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "areaDto",
+        "Type": "DineinEasy.API.RequestDTO.Area.CreatedAreaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DineinEasy.Service.Responses.IBusinessResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DineinEasy.API.Controllers.AreaController",
     "Method": "UpdateArea",
     "RelativePath": "area/{id}",
     "HttpMethod": "PUT",
@@ -103,19 +129,122 @@
     ]
   },
   {
-    "ContainingType": "DineinEasy.API.Controllers.AreaController",
-    "Method": "CreateArea",
-    "RelativePath": "areas",
+    "ContainingType": "DineinEasy.API.Controllers.BannerController",
+    "Method": "Create",
+    "RelativePath": "banner",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "areaDto",
-        "Type": "DineinEasy.API.RequestDTO.Area.CreatedAreaDto",
+        "Name": "Dto",
+        "Type": "DineinEasy.API.RequestDTO.Banner.CreatedBanner",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": [
+      {
+        "Type": "DineinEasy.Service.Responses.IBusinessResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DineinEasy.API.Controllers.BannerController",
+    "Method": "Update",
+    "RelativePath": "banner/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Dto",
+        "Type": "DineinEasy.API.RequestDTO.Banner.UpdatedBanner",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DineinEasy.Service.Responses.IBusinessResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DineinEasy.API.Controllers.BannerController",
+    "Method": "GetByid",
+    "RelativePath": "banner/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DineinEasy.Service.Responses.IBusinessResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DineinEasy.API.Controllers.BannerController",
+    "Method": "DeleteByid",
+    "RelativePath": "banner/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DineinEasy.Service.Responses.IBusinessResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DineinEasy.API.Controllers.BannerController",
+    "Method": "GetAll",
+    "RelativePath": "banners",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "DineinEasy.Service.Responses.IBusinessResult",

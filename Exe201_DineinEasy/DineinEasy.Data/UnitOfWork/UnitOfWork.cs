@@ -24,6 +24,7 @@ namespace DineinEasy.Data.UnitOfWork
         private TimeFrameRepository _timeFrame;
         private UserRepository _user;
         private AreaRepository _area;
+        private BannerRepository _banner;
         public UnitOfWork()
         {
             _context ??= new EXE2_DineinEasyContext();
@@ -121,6 +122,14 @@ namespace DineinEasy.Data.UnitOfWork
             get
             {
                 return _area ??= new AreaRepository();
+            }
+        }
+       public BannerRepository BannerRepository
+        {
+
+            get
+            {
+                return _banner ??= new BannerRepository();
             }
         }
     }

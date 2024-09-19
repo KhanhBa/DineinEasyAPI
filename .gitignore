@@ -56,3 +56,17 @@ yarn-error.log*
 
 # Bỏ qua thư mục build tool của dotnet
 .idea/
+
+# Bỏ qua thư mục .vs
+
+.vs/
+./Exe201_DineinEasy/.vs/
+./Exe201_DineinEasy/DineinEasy.API/.vs/
+./Exe201_DineinEasy/DineinEasy.Data/.vs/
+./Exe201_DineinEasy/DineinEasy.Service/.vs/
+
+./Exe201_DineinEasy/DineinEasy.API/bin/
+./Exe201_DineinEasy/DineinEasy.Data/bin/
+./Exe201_DineinEasy/DineinEasy.Service/bin/
+
+*.AssemblyReference.cache

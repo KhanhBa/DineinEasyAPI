@@ -1,5 +1,4 @@
 # Thư mục và tệp hệ thống
-.vs/
 .vscode/
 *.user
 *.suo
@@ -57,17 +56,21 @@ yarn-error.log*
 # Bỏ qua thư mục build tool của dotnet
 .idea/
 
-# Bỏ qua thư mục .vs trong tất cả các phần của dự án
-.vs/
-./Exe201_DineinEasy/.vs/
-./Exe201_DineinEasy/DineinEasy.API/.vs/
-./Exe201_DineinEasy/DineinEasy.Data/.vs/
-./Exe201_DineinEasy/DineinEasy.Service/.vs/
+# Bỏ qua thư mục .vs cho toàn bộ dự án
+Exe201_DineinEasy/.vs/
+Exe201_DineinEasy/DineinEasy.API/.vs/
+Exe201_DineinEasy/DineinEasy.Data/.vs/
+Exe201_DineinEasy/DineinEasy.Service/.vs/
 
 # Bỏ qua các thư mục bin trong từng phần của dự án
-./Exe201_DineinEasy/DineinEasy.API/bin/
-./Exe201_DineinEasy/DineinEasy.Data/bin/
-./Exe201_DineinEasy/DineinEasy.Service/bin/
+Exe201_DineinEasy/DineinEasy.API/bin/
+Exe201_DineinEasy/DineinEasy.Data/bin/
+Exe201_DineinEasy/DineinEasy.Service/bin/
+
+# Bỏ qua thư mục obj trong từng phần của dự án
+Exe201_DineinEasy/DineinEasy.API/obj/
+Exe201_DineinEasy/DineinEasy.Data/obj/
+Exe201_DineinEasy/DineinEasy.Service/obj/
 
 # Bỏ qua tệp AssemblyReference.cache
 *.AssemblyReference.cache

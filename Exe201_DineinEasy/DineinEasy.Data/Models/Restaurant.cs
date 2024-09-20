@@ -11,7 +11,7 @@ public partial class Restaurant
 
     public string Tags { get; set; }
 
-    public string CreateAt { get; set; }
+    public DateTime CreateAt { get; set; }
 
     public double Longitude { get; set; }
 

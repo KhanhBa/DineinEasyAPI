@@ -1,5 +1,6 @@
 
 using AutoMapper;
+using DineinEasy.API.Utilities;
 using DineinEasy.Data.UnitOfWork;
 using DineinEasy.Service.Services;
 using Microsoft.AspNetCore.Hosting;
@@ -13,12 +14,18 @@ namespace DineinEasy.API
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            builder.Services.AddControllers()
+            .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+                });
             // Add services to the container.
             builder.Services.AddControllers();
             builder.Services.AddScoped<IAreaService,AreaService>();
             builder.Services.AddScoped<ICategoryService,CategoryService>();
             builder.Services.AddScoped<IPackageService, PackageService>();
             builder.Services.AddScoped<IBannerService, BannerService>();
+            builder.Services.AddScoped<IRestaurantService, RestaurantService>();
             builder.Services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
@@ -37,7 +44,6 @@ namespace DineinEasy.API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

@@ -6,7 +6,7 @@ public partial class RestaurantModel
 
     public string Tags { get; set; }
 
-    public string CreateAt { get; set; }
+    public DateTime CreateAt { get; set; }
 
     public double Longitude { get; set; }
 

@@ -29,7 +29,7 @@ pipeline {
                 echo 'Deploying and cleaning'
                 sh 'docker container stop dineineasyapi || echo "this container does not exist" '
                 sh 'echo y | docker system prune '
-                sh 'docker container run -d --name dineineasyapi -p 8080:80 -p 4433:443 tuanhuu3264/dineineasyapi '
+                sh 'docker container run -d --name dineineasyapi -p 7777:80 -p 7778:443 tuanhuu3264/dineineasyapi '
             }
         }
         

@@ -18,7 +18,7 @@ pipeline {
 
             steps {
                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
-                    sh 'docker tag outfitbox-api:latest tuanhuu3264/dineineasyapi:latest'
+                    sh 'docker tag dineineasyapi:latest tuanhuu3264/dineineasyapi:latest'
                     sh 'docker push tuanhuu3264/dineineasyapi:latest'
                 }
             }

@@ -1,0 +1,165 @@
+CREATE TABLE Area (
+    Id INT PRIMARY KEY IDENTITY,
+    Ward NVARCHAR(50) NOT NULL,
+    District NVARCHAR(50) NOT NULL,
+    City NVARCHAR(50) NOT NULL,
+    Status BIT NOT NULL
+);
+
+CREATE TABLE Banner (
+    Id INT PRIMARY KEY IDENTITY,
+    ExpriedDate DATETIME NULL,
+    CreatedAt DATETIME NULL,
+    ImageUrl NVARCHAR(MAX) NULL,
+    Status BIT NULL
+);
+
+CREATE TABLE Category (
+    Id INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(50) NOT NULL,
+    Description NVARCHAR(MAX) NOT NULL,
+    Status BIT NOT NULL
+);
+
+CREATE TABLE Customer (
+    Id INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(MAX) NOT NULL,
+    Email NVARCHAR(MAX) NOT NULL,
+    Phone NVARCHAR(12) NOT NULL,
+    Password NVARCHAR(20) NOT NULL,
+    CreateAt DATETIME NOT NULL,
+    ImageUrl NVARCHAR(MAX) NOT NULL,
+    Status BIT NOT NULL
+);
+
+CREATE TABLE Notification (
+    Id INT PRIMARY KEY IDENTITY,
+    Title NVARCHAR(MAX) NOT NULL,
+    Type NVARCHAR(50) NOT NULL,
+    Body NVARCHAR(MAX) NOT NULL,
+    ImageUrl NVARCHAR(MAX) NOT NULL,
+    CreatedAt DATETIME NOT NULL,
+    CustomerId INT NOT NULL,
+    FOREIGN KEY (CustomerId) REFERENCES Customer(Id) ON DELETE CASCADE
+);
+
+CREATE TABLE OrderBooking (
+    Id INT PRIMARY KEY IDENTITY,
+    CreatedAt DATETIME NULL,
+    BookingDate DATETIME NULL,
+    BookingTime DATETIME NULL,
+    NumberSeats INT NULL,
+    IsChecking BIT NULL,
+    CustomerId INT NULL,
+    RestaurantId INT NULL,
+    Note NVARCHAR(MAX) NULL,
+    Status BIT NULL,
+    FOREIGN KEY (CustomerId) REFERENCES Customer(Id) ON DELETE SET NULL,
+    FOREIGN KEY (RestaurantId) REFERENCES Restaurant(Id) ON DELETE SET NULL
+);
+
+CREATE TABLE OrderMembership (
+    Id INT PRIMARY KEY IDENTITY,
+    RestaurantId INT NOT NULL,
+    PackageId INT NOT NULL,
+    ExpiredDate DATETIME NOT NULL,
+    CreatedDate DATETIME NOT NULL,
+    ValueDays INT NOT NULL,
+    Name NVARCHAR(MAX) NOT NULL,
+    Description NVARCHAR(MAX) NOT NULL,
+    ImageUrl NVARCHAR(MAX) NOT NULL,
+    Price FLOAT NOT NULL,
+    Discount FLOAT NOT NULL,
+    Status BIT NOT NULL,
+    FOREIGN KEY (RestaurantId) REFERENCES Restaurant(Id) ON DELETE CASCADE,
+    FOREIGN KEY (PackageId) REFERENCES Package(Id) ON DELETE CASCADE
+);
+
+CREATE TABLE Package (
+    Id INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(MAX) NOT NULL,
+    Description NVARCHAR(MAX) NOT NULL,
+    ImageUrl NVARCHAR(MAX) NOT NULL,
+    ValueDays INT NOT NULL,
+    Price FLOAT NOT NULL,
+    Discount FLOAT NOT NULL,
+    Status BIT NOT NULL,
+    CreateAt DATETIME NOT NULL
+);
+
+CREATE TABLE Restaurant (
+    Id INT PRIMARY KEY IDENTITY,
+    Tags NVARCHAR(MAX) NOT NULL,
+    CreateAt DATETIME NOT NULL,
+    Longitude FLOAT NOT NULL,
+    Latitude FLOAT NOT NULL,
+    Address NVARCHAR(MAX) NOT NULL,
+    Name NVARCHAR(MAX) NOT NULL,
+    Description NVARCHAR(MAX) NOT NULL,
+    NumberTable INT NOT NULL,
+    Email NVARCHAR(MAX) NOT NULL,
+    Phone NVARCHAR(50) NOT NULL,
+    Avatar NVARCHAR(MAX) NOT NULL,
+    UpdateAt DATETIME NOT NULL,
+    CategoryId INT NOT NULL,
+    Rating FLOAT NOT NULL,
+    Status BIT NOT NULL,
+    AreaId INT NOT NULL,
+    FOREIGN KEY (CategoryId) REFERENCES Category(Id) ON DELETE CASCADE,
+    FOREIGN KEY (AreaId) REFERENCES Area(Id) ON DELETE CASCADE
+);
+
+CREATE TABLE RestaurantImage (
+    Id INT PRIMARY KEY IDENTITY,
+    ImageUrl NVARCHAR(MAX) NOT NULL,
+    RestaurantId INT NULL,
+    FOREIGN KEY (RestaurantId) REFERENCES Restaurant(Id) ON DELETE SET NULL
+);
+
+CREATE TABLE Review (
+    Id INT PRIMARY KEY IDENTITY,
+    Number INT NOT NULL,
+    Content NVARCHAR(MAX) NOT NULL,
+    CreateAt DATETIME NOT NULL,
+    CustomerId INT NOT NULL,
+    RestaurantId INT NOT NULL,
+    Status BIT NOT NULL,
+    FOREIGN KEY (CustomerId) REFERENCES Customer(Id) ON DELETE CASCADE,
+    FOREIGN KEY (RestaurantId) REFERENCES Restaurant(Id) ON DELETE CASCADE
+);
+
+CREATE TABLE ReviewImage (
+    Id INT PRIMARY KEY IDENTITY,
+    ImageUrl NVARCHAR(MAX) NOT NULL,
+    ReviewId INT NOT NULL,
+    FOREIGN KEY (ReviewId) REFERENCES Review(Id) ON DELETE CASCADE
+);
+
+CREATE TABLE SavedRestaurant (
+    Id INT PRIMARY KEY IDENTITY,
+    CustmerId INT NOT NULL,
+    RestaurantId INT NOT NULL,
+    FOREIGN KEY (CustmerId) REFERENCES Customer(Id) ON DELETE CASCADE,
+    FOREIGN KEY (RestaurantId) REFERENCES Restaurant(Id) ON DELETE CASCADE
+);
+
+CREATE TABLE TimeFrame (
+    Id INT PRIMARY KEY IDENTITY,
+    Day NVARCHAR(50) NOT NULL,
+    OpenedTime TIME NOT NULL,
+    ClosedTime TIME NOT NULL,
+    RestaurantId INT NOT NULL,
+    FOREIGN KEY (RestaurantId) REFERENCES Restaurant(Id) ON DELETE CASCADE
+);
+
+CREATE TABLE [User] (
+    Id INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(30) NOT NULL,
+    Email NVARCHAR(50) NOT NULL,
+    Phone NVARCHAR(12) NOT NULL,
+    DateOfBirth DATETIME NOT NULL,
+    Role INT NOT NULL,
+    Password NVARCHAR(10) NOT NULL,
+    CreateAt DATETIME NOT NULL,
+    Status BIT NOT NULL
+);

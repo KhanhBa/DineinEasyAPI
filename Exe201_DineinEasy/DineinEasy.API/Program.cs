@@ -27,6 +27,7 @@ namespace DineinEasy.API
             builder.Services.AddScoped<IBannerService, BannerService>();
             builder.Services.AddScoped<IRestaurantService, RestaurantService>();
             builder.Services.AddScoped<ITimeFrameService, TimeFrameService>();
+            builder.Services.AddScoped<IReviewService, ReviewService>();
             builder.Services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());

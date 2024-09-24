@@ -15,6 +15,7 @@ namespace DineinEasy.API.Utilities
             AreaProfile();
             CategoryProfile();
             BannerProfile();
+            TimeFrameProfile();
         }
         public void RestaurantProfile()
         {
@@ -56,6 +57,11 @@ namespace DineinEasy.API.Utilities
         {
             CreateMap<Banner, BannerModel>().ReverseMap()
                      .ForMember(dest => dest.Id, opt => opt.Ignore());
+        }
+        public void TimeFrameProfile()
+        {
+            CreateMap<TimeFrame, TimeFrameModel>().ReverseMap()
+                    .ForMember(dest => dest.Id, opt => opt.Ignore());
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DineinEasy.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,10 @@ namespace DineinEasy.Data.Repositories
         public TimeFrameRepository(EXE2_DineinEasyContext context)
         {
             _context = context;
+        }
+        public async Task<List<TimeFrame>> GetTimeFramesByRestaurantId(int restaurantId)
+        {
+            return await _context.TimeFrames.Where(x=>x.RestaurantId == restaurantId).ToListAsync();
         }
     }
 }

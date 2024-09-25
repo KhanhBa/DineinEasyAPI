@@ -32,7 +32,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpPost("restaurant")]
+        [HttpPost("restaurants")]
         public async Task<ActionResult<IBusinessResult>> Create([FromBody] CreatedRestaurant dto)
         {
             try
@@ -46,7 +46,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpPut("restaurant/{id}")]
+        [HttpPut("restaurants/{id}")]
         public async Task<ActionResult<IBusinessResult>> Update([FromBody] UpdatedRestaurant dto, [FromRoute] int id)
         {
             try
@@ -60,7 +60,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpGet("restaurant/{id}")]
+        [HttpGet("restaurants/{id}")]
         public async Task<ActionResult<IBusinessResult>> GetByid([FromRoute] int id)
         {
             try
@@ -73,7 +73,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpDelete("restaurant/{id}")]
+        [HttpDelete("restaurants/{id}")]
         public async Task<ActionResult<IBusinessResult>> DeleteByid([FromRoute] int id)
         {
             try
@@ -86,5 +86,18 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("restaurants/{email}/{password}")]
+        public async Task<ActionResult<IBusinessResult>> SignIn([FromRoute] string email , [FromRoute] string password)
+        {
+            try
+            {
+                var result = await _restaurantService.SignIn(email,password);
+                return StatusCode(200, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        } 
     }
 }

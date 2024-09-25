@@ -13,6 +13,12 @@ public partial class EXE2_DineinEasyContext : DbContext
         : base(options)
     {
     }
+
+    string user = Environment.GetEnvironmentVariable("DB_USER");
+    string pass = Environment.GetEnvironmentVariable("DB_PASSWORD");
+    string serverName = Environment.GetEnvironmentVariable("DB_SERVER");
+    string dbName = Environment.GetEnvironmentVariable("DB_NAME");
+
     public EXE2_DineinEasyContext() { }
 
     public virtual DbSet<Area> Areas { get; set; }
@@ -56,7 +62,7 @@ public partial class EXE2_DineinEasyContext : DbContext
         return connectionString;
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection"));
+        => optionsBuilder.UseSqlServer($"data source={serverName};initial catalog={dbName};user id={user};password={pass};trustservercertificate=true;multipleactiveresultsets=true;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

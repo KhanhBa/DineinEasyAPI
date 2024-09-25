@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.Internal;
 using DineinEasy.API.RequestDTO.Restaurant;
+using DineinEasy.API.RequestDTO.User;
 using DineinEasy.Data.Models;
 using DineinEasy.Service.Models;
 
@@ -37,6 +38,8 @@ namespace DineinEasy.API.Utilities
         public void UserProfile()
         {
             CreateMap<User, UserModel>().ReverseMap();
+            CreateMap<CreatedUser, UserModel>();
+            CreateMap<UpdatedUser, UserModel>();
         }
         public void PackageProfile()
         {

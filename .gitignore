@@ -91,5 +91,12 @@ Exe201_DineinEasy/DineinEasy.API/obj/
 Exe201_DineinEasy/DineinEasy.Data/obj/
 Exe201_DineinEasy/DineinEasy.Service/obj/
 
+# Bỏ qua tệp .env trong toàn bộ dự án
+.env
+Exe201_DineinEasy/DineinEasy.API/.env
+Exe201_DineinEasy/.env
+
 # Bỏ qua các tệp AssemblyReference.cache trong toàn bộ dự án
 Exe201_DineinEasy/**/AssemblyReference.cache
+
+

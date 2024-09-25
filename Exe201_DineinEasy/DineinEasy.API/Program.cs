@@ -3,7 +3,10 @@ using AutoMapper;
 using DineinEasy.API.Utilities;
 using DineinEasy.Data.UnitOfWork;
 using DineinEasy.Service.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using System.Text.Json.Serialization;
 
 namespace DineinEasy.API
@@ -12,6 +15,10 @@ namespace DineinEasy.API
     {
         public static void Main(string[] args)
         {
+            // DotEnv
+            DotNetEnv.Env.Load();
+            DotNetEnv.Env.TraversePath().Load();
+
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddControllers()
@@ -27,10 +34,30 @@ namespace DineinEasy.API
             builder.Services.AddScoped<IBannerService, BannerService>();
             builder.Services.AddScoped<IRestaurantService, RestaurantService>();
             builder.Services.AddScoped<ITimeFrameService, TimeFrameService>();
+            builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
             });
+
+            // Jwt Configuration 
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+               .AddJwtBearer(options =>
+               {
+                   options.SaveToken = true;
+                   options.TokenValidationParameters = new TokenValidationParameters
+                   {
+                       ValidateIssuer = true,
+                       ValidateAudience = true,
+                       ValidateLifetime = true,
+                       ValidateIssuerSigningKey = true,
+                       ValidAudience = Environment.GetEnvironmentVariable("AUDIENCE"),
+                       ValidIssuer = Environment.GetEnvironmentVariable("ISSUER"),
+                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("JWT_KEY")))
+
+                   };
+               });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -41,6 +68,8 @@ namespace DineinEasy.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors(cors => cors.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseHttpsRedirection();
 

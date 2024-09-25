@@ -25,6 +25,7 @@ namespace DineinEasy.Data.UnitOfWork
         private UserRepository _user;
         private AreaRepository _area;
         private BannerRepository _banner;
+
         public UnitOfWork()
         {
             _context ??= new EXE2_DineinEasyContext();

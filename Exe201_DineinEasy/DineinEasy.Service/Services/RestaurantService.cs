@@ -21,7 +21,7 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> DeleteRestaurant(int id);
         Task<IBusinessResult> GetAllRestaurants();
         Task<IBusinessResult> GetRestaurantById(int id);
-        public Task<IBusinessResult> SignIn(string email, string password);
+        Task<IBusinessResult> SignIn(string email, string password);
     }
     public class RestaurantService:IRestaurantService
     {

@@ -5,6 +5,7 @@ using DineinEasy.API.RequestDTO.User;
 using DineinEasy.API.RequestDTO.Review;
 using DineinEasy.Data.Models;
 using DineinEasy.Service.Models;
+using DineinEasy.API.RequestDTO.Customer;
 
 namespace DineinEasy.API.Utilities
 {
@@ -18,6 +19,14 @@ namespace DineinEasy.API.Utilities
             CategoryProfile();
             BannerProfile();
             TimeFrameProfile();
+            CustomerProfile();
+        }
+
+        public void CustomerProfile()
+        {
+            CreateMap<Customer, CustomerModel>().ReverseMap();
+            CreateMap<CreatedCustomer, CustomerModel>();
+            CreateMap<UpdatedCustomer, CustomerModel>();
         }
         public void RestaurantProfile()
         {

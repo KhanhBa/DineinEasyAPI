@@ -10,13 +10,11 @@ public partial class CustomerModel
 
     public string Phone { get; set; }
 
-    public string Password { get; set; }
-
     public DateTime CreateAt { get; set; }
 
     public string ImageUrl { get; set; }
 
-    public bool Status { get; set; }
+    public bool Status { get; set; } = true;
 
     public virtual ICollection<NotificationModel> Notifications { get; set; } = new List<NotificationModel>();
 

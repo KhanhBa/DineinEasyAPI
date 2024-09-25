@@ -1,4 +1,5 @@
 ﻿using DineinEasy.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,14 @@ namespace DineinEasy.Data.Repositories
         public ReviewRepository(EXE2_DineinEasyContext context)
         {
             _context = context;
+        }
+        public async Task<List<Review>> GetReviewsByRestaurantIdAsync(int restaurantId)
+        {
+            return await _context.Reviews.Where(x=>x.RestaurantId== restaurantId).Include(x=>x.ReviewImages).ToListAsync();
+        }
+        public async Task<Review> GetReviewByIdAsync(int id)
+        {
+            return await _context.Reviews.Where(x => x.Id == id).Include(x => x.ReviewImages).FirstOrDefaultAsync();
         }
     }
 }

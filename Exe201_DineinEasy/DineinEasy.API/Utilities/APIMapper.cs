@@ -2,6 +2,7 @@
 using AutoMapper.Internal;
 using DineinEasy.API.RequestDTO.Restaurant;
 using DineinEasy.API.RequestDTO.User;
+using DineinEasy.API.RequestDTO.Review;
 using DineinEasy.Data.Models;
 using DineinEasy.Service.Models;
 
@@ -65,6 +66,18 @@ namespace DineinEasy.API.Utilities
         {
             CreateMap<TimeFrame, TimeFrameModel>().ReverseMap()
                     .ForMember(dest => dest.Id, opt => opt.Ignore());
+        }
+        public void ReviewProfile()
+        {
+            CreateMap<Review, ReviewModel>()
+                .ForMember(x => x.ReviewImages, otp => otp.MapFrom(x => x.ReviewImages))
+                .ReverseMap();
+            CreateMap<ReviewImage, ReviewImageModel>().ReverseMap();
+            CreateMap<CreatedReview,ReviewModel>()
+                .ForMember(x=>x.ReviewImages,otp => otp.MapFrom(x => x.Images)).ReverseMap();
+            CreateMap<ReviewImage, CreatedImage>()
+                .ForMember(x => x.ImageUrl, otp => otp.MapFrom(x => x.ImageUrl)).ReverseMap();
+            CreateMap<UpdatedReview, ReviewModel>().ReverseMap();
         }
     }
 }

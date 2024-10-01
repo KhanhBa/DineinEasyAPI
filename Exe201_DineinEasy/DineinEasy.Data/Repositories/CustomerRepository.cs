@@ -18,7 +18,6 @@ namespace DineinEasy.Data.Repositories
         }
         public async Task<List<AdminData>> GetNewCustomers()
         {
-
             var data = await _context.Customers.GroupBy(x => x.CreateAt.Date).OrderBy(x => x.Key).Select(g => new AdminData
             {
                 Date = g.Key,

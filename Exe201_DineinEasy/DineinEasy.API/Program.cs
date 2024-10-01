@@ -21,11 +21,7 @@ namespace DineinEasy.API
 
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            builder.Services.AddControllers()
-            .AddJsonOptions(options =>
-                {
-                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
-                });
+            builder.Services.AddControllers();
             // Add services to the container.
             builder.Services.AddControllers();
             builder.Services.AddScoped<IAreaService,AreaService>();

@@ -17,7 +17,7 @@ namespace DineinEasy.Data.Repositories
         public GenericRepository()
         {
             _context ??= new EXE2_DineinEasyContext();
-
+            _dbSet = _context.Set<T>();
         }
 
         #region Separating asign entity and save operators
@@ -57,25 +57,25 @@ namespace DineinEasy.Data.Repositories
 
         public IEnumerable<T> FindByCondition(Expression<Func<T, bool>> expression)
         {
-            return _context.Set<T>().Where(expression).AsNoTracking();
+            return _dbSet.Where(expression).AsNoTracking();
         }
 
         public async Task<IEnumerable<T>> FindByConditionAsync(Expression<Func<T, bool>> expression)
         {
-            return await _context.Set<T>().Where(expression).AsNoTracking().ToListAsync();
+            return await _dbSet.Where(expression).AsNoTracking().ToListAsync();
         }
         public List<T> GetAll()
         {
-            return _context.Set<T>().ToList();
+            return _dbSet.ToList();
         }
         public async Task<List<T>> GetAllAsync()
         {
-            return await _context.Set<T>().ToListAsync();
+            return await _dbSet.ToListAsync();
         }
 
         public List<T> GetAll(params Expression<Func<T, object>>[] includes)
         {
-            var query = _context.Set<T>().AsQueryable();
+            var query = _dbSet.AsQueryable();
             foreach (var include in includes)
             {
                 query = query.Include(include);
@@ -85,7 +85,7 @@ namespace DineinEasy.Data.Repositories
 
         public async Task<List<T>> GetAllAsync(params Expression<Func<T, object>>[] includes)
         {
-            var query = _context.Set<T>().AsQueryable();
+            var query = _dbSet.AsQueryable();
             foreach (var include in includes)
             {
                 query = query.Include(include);

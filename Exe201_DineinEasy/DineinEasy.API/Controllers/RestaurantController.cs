@@ -25,7 +25,7 @@ namespace DineinEasy.API.Controllers
             try
             {
                 var list = await _restaurantService.GetAllRestaurants();
-                return StatusCode(list.Status, list);
+                return Ok(list);
             }
             catch (Exception ex)
             {
@@ -39,7 +39,7 @@ namespace DineinEasy.API.Controllers
             {
                 var obj = _mapper.Map<RestaurantModel>(dto);
                 var result = await _restaurantService.CreateRestaurant(obj);
-                return StatusCode(result.Status, result);
+                return Ok(result);
             }
             catch (Exception ex)
             {
@@ -53,11 +53,11 @@ namespace DineinEasy.API.Controllers
             {
                 var obj = _mapper.Map<RestaurantModel>(dto);
                 var result = await _restaurantService.UpdateRestaurant(obj,id);
-                return StatusCode(result.Status, result);
+                return Ok(result);
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return Ok( ex.Message);
             }
         }
         [HttpGet("restaurants/{id}")]
@@ -66,8 +66,8 @@ namespace DineinEasy.API.Controllers
             try
             {
                 var result = await _restaurantService.GetRestaurantById(id);
-                return StatusCode(result.Status, result);
-            }
+                    return StatusCode(result.Status, result);
+                }
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
@@ -79,7 +79,7 @@ namespace DineinEasy.API.Controllers
             try
             {
                 var result = await _restaurantService.DeleteRestaurant(id);
-                return StatusCode(result.Status, result);
+                return Ok(result);
             }
             catch (Exception ex)
             {
@@ -92,7 +92,7 @@ namespace DineinEasy.API.Controllers
             try
             {
                 var result = await _restaurantService.SignIn(email,password);
-                return StatusCode(200, result);
+                return Ok(result);
             }
             catch (Exception ex)
             {

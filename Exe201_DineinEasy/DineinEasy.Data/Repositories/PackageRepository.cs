@@ -14,5 +14,6 @@ namespace DineinEasy.Data.Repositories
         {
             _context = context;
         }
+
     }
 }

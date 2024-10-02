@@ -40,6 +40,7 @@ pipeline {
         stage('Deploy FE to DEV') {
             steps {
                 echo 'Deploying and cleaning'
+                echo "${DB_USER}"
                 sh 'if [ $(docker ps -q -f name=dineineasyapi) ]; then docker container stop dineineasyapi; fi'
                 sh 'echo y | docker system prune'
                 sh 'docker container run -d --name dineineasyapi -p 7777:8080 -p 7778:8081 ' +

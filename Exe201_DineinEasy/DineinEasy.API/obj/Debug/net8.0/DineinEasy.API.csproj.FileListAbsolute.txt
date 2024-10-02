@@ -144,6 +144,7 @@ D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\obj\Debug\net8.0\Di
 D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\obj\Debug\net8.0\DineinEasy.API.genruntimeconfig.cache
 D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\obj\Debug\net8.0\ref\DineinEasy.API.dll
 D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+<<<<<<< HEAD
 D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -172,3 +173,19 @@ D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Sy
 D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\System.Text.Json.dll
 D:\Semester 8\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+=======
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\DotNetEnv.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\MimeMapping.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Sprache.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Supabase.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Supabase.Core.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Supabase.Functions.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Supabase.Gotrue.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Supabase.Postgrest.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Supabase.Realtime.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Supabase.Storage.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\System.Reactive.dll
+C:\Users\Admin\OneDrive\Máy tính\DineinEasyAPI\Exe201_DineinEasy\DineinEasy.API\bin\Debug\net8.0\Websocket.Client.dll
+>>>>>>> e0a424018a91433f74caee44cbec7639f5978434

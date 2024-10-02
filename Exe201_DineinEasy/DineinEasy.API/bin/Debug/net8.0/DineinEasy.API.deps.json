@@ -1387,7 +1387,10 @@
           "Supabase": "1.1.1"
         },
         "runtime": {
-          "DineinEasy.Data.dll": {}
+          "DineinEasy.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DineinEasy.Service/1.0.0": {
@@ -1396,7 +1399,10 @@
           "DineinEasy.Data": "1.0.0"
         },
         "runtime": {
-          "DineinEasy.Service.dll": {}
+          "DineinEasy.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

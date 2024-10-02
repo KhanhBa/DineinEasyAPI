@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DineinEasy.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f14ed8e48a10aad8eee6c525058bb905c8336f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41b15367f7fcea5d17a44721905d01a21cb4b055")]
 [assembly: System.Reflection.AssemblyProductAttribute("DineinEasy.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DineinEasy.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

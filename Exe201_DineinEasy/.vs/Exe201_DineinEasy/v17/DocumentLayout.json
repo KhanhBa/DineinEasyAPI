@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|d:\\semester 8\\dineineasyapi\\exe201_dineineasy\\dineineasy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9C2B1DC-1891-43F2-8127-84340D709B80}|DineinEasy.API\\DineinEasy.API.csproj|solutionrelative:dineineasy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -162,15 +165,30 @@
       "DocumentGroups": [
         {
           "DockedHeight": 233,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAAIYVAAAAAAAAAAAMwJsVAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-10-02T12:31:50.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EXE2_DineinEasyContext.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\EXE2_DineinEasyContext.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\EXE2_DineinEasyContext.cs",
@@ -183,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "20241002122446_InitDatabase.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Migrations\\20241002122446_InitDatabase.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Migrations\\20241002122446_InitDatabase.cs",
@@ -196,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "20241002122332_InitDatabase.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Migrations\\20241002122332_InitDatabase.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Migrations\\20241002122332_InitDatabase.cs",
@@ -209,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "20241002122143_InitDatabase.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Migrations\\20241002122143_InitDatabase.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Migrations\\20241002122143_InitDatabase.cs",
@@ -222,24 +240,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Program.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\Program.cs",
               "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Program.cs",
               "RelativeToolTip": "DineinEasy.API\\Program.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAQwBcAAAAtAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwDUAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T10:40:42.492Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "20241002120449_InitDatabase.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Migrations\\20241002120449_InitDatabase.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Migrations\\20241002120449_InitDatabase.cs",
@@ -252,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "20241002084630_initDB.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Migrations\\20241002084630_initDB.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Migrations\\20241002084630_initDB.cs",
@@ -264,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Area.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Area.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\Area.cs",
@@ -276,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Banner.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Banner.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\Banner.cs",
@@ -288,18 +302,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "DineinEasy.Data",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\DineinEasy.Data.csproj",
               "RelativeDocumentMoniker": "DineinEasy.Data\\DineinEasy.Data.csproj",
               "ToolTip": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\DineinEasy.Data.csproj",
               "RelativeToolTip": "DineinEasy.Data\\DineinEasy.Data.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-02T08:37:05.11Z"
+              "WhenOpened": "2024-10-02T08:37:05.11Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "DineinEasy.Data.csproj",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\DineinEasy.Data.csproj",
               "RelativeDocumentMoniker": "DineinEasy.Data\\DineinEasy.Data.csproj",
@@ -307,11 +322,12 @@
               "RelativeToolTip": "DineinEasy.Data\\DineinEasy.Data.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-02T08:24:26.508Z"
+              "WhenOpened": "2024-10-02T08:24:26.508Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AreaService.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\AreaService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\AreaService.cs",
@@ -323,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "DineinEasy.API.csproj",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\DineinEasy.API.csproj",
               "RelativeDocumentMoniker": "DineinEasy.API\\DineinEasy.API.csproj",
@@ -331,11 +347,12 @@
               "RelativeToolTip": "DineinEasy.API\\DineinEasy.API.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-02T08:25:12.494Z"
+              "WhenOpened": "2024-10-02T08:25:12.494Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Repositories\\GenericRepository.cs",
@@ -347,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CustomerModel.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\CustomerModel.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Models\\CustomerModel.cs",
@@ -359,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "APIMapper.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Utilities\\APIMapper.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\Utilities\\APIMapper.cs",
@@ -371,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "CreatedCustomer.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Customer\\CreatedCustomer.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Customer\\CreatedCustomer.cs",
@@ -383,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "RestaurantService.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\RestaurantService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\RestaurantService.cs",
@@ -396,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "RestaurantController.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\RestaurantController.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\Controllers\\RestaurantController.cs",
@@ -408,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "RestaurantModel.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\RestaurantModel.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Models\\RestaurantModel.cs",
@@ -420,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ReviewService.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\ReviewService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\ReviewService.cs",
@@ -432,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\CustomerService.cs",
@@ -444,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\Controllers\\CustomerController.cs",
@@ -456,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "UpdatedCustomer.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\Customer\\UpdatedCustomer.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\Customer\\UpdatedCustomer.cs",
@@ -468,7 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\Controllers\\UserController.cs",
@@ -480,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "PackageService.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\PackageService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\PackageService.cs",
@@ -492,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "CustomerRepository.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Repositories\\CustomerRepository.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Repositories\\CustomerRepository.cs",
@@ -504,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\CategoryService.cs",
@@ -516,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "Restaurant.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\Models\\Restaurant.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\Models\\Restaurant.cs",
@@ -528,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Dockerfile",
               "RelativeDocumentMoniker": "DineinEasy.API\\Dockerfile",
@@ -540,7 +557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "UserModel.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Models\\UserModel.cs",
@@ -552,7 +569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "CreatedUser.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\User\\CreatedUser.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\User\\CreatedUser.cs",
@@ -564,7 +581,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "UpdatedUser.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\RequestDTO\\User\\UpdatedUser.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\RequestDTO\\User\\UpdatedUser.cs",
@@ -576,7 +593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "AreaController.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.API\\Controllers\\AreaController.cs",
               "RelativeDocumentMoniker": "DineinEasy.API\\Controllers\\AreaController.cs",
@@ -588,7 +605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\UserService.cs",
@@ -600,7 +617,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\UserRepository.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\UserRepository.cs",
@@ -612,7 +629,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "TimeFrameService.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Service\\Services\\TimeFrameService.cs",
               "RelativeDocumentMoniker": "DineinEasy.Service\\Services\\TimeFrameService.cs",
@@ -624,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\Semester 8\\DineinEasyAPI\\Exe201_DineinEasy\\DineinEasy.Data\\UnitOfWork\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "DineinEasy.Data\\UnitOfWork\\UnitOfWork.cs",

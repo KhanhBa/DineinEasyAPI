@@ -23,13 +23,22 @@ namespace DineinEasy.Data.OutServices
                
         }
 
+        private async Task EnsureInitialized()
+        {
+            if (supabase == null)
+            {
+                supabase = await InitializeClient();
+            }
+        }
+
+
         public async Task<Supabase.Client> InitializeClient()
         {
             if (string.IsNullOrEmpty(url)) throw new ArgumentNullException("not found supabase url");
 
             if (string.IsNullOrEmpty(key)) throw new ArgumentNullException("not found supabase key");
 
-            var supabase =  new Supabase.Client(url, key, options);
+            var supabase = new Supabase.Client(url, key, options);
             await supabase.InitializeAsync();
             return supabase;
         }
@@ -50,6 +59,33 @@ namespace DineinEasy.Data.OutServices
             }
 
             return (true, authResponse.AccessToken);
+        }
+        
+        public async Task<string> UploadFile(byte[] fileBytes, string fileName, string bucket)
+        {
+            if (fileBytes == null || fileBytes.Length == 0) throw new ArgumentNullException("File bytes are empty.");
+            if (string.IsNullOrEmpty(bucket)) throw new ArgumentNullException("Bucket name is empty.");
+
+            await EnsureInitialized();
+            var storage = supabase.Storage;
+            var bucketClient = storage.From(bucket);
+
+            try
+            {
+                var response = await bucketClient.Upload(fileBytes, fileName);
+                if (!string.IsNullOrEmpty(response))
+                {
+                    return $"{url}/storage/v1/object/public/{bucket}/{fileName}";
+                }
+                else
+                {
+                    throw new Exception("File upload failed.");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to upload file: {ex.Message}");
+            }
         }
 
     }

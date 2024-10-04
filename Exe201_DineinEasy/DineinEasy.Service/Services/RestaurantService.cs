@@ -26,6 +26,7 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> SignIn(string email, string password);
         public  Task<IBusinessResult> GetImageRestaurantById(int id);
         Task<IBusinessResult> GetInfomationForPartner(int restaurant);
+        Task<IBusinessResult> GetReviewsRestaurantById(int id);
     }
     public class RestaurantService : IRestaurantService
     {
@@ -141,7 +142,14 @@ namespace DineinEasy.Service.Services
             var result = _mapper.Map<List<RestaurantImageModel>>(obj);
             return new BusinessResult(200, "Get restaurant's images successfully", result);
         }
-
+        public async Task<IBusinessResult> GetReviewsRestaurantById(int id)
+        {
+            var obj = await _unitOfWork.ReviewRepository.FindByConditionAsync(x => x.RestaurantId == id);
+            if (obj == null)
+            { return new BusinessResult(404, "Can not find restaurant's reviews"); }
+            var result = _mapper.Map<List<ReviewModel>>(obj);
+            return new BusinessResult(200, "Get restaurant's reviews successfully", result);
+        }
 
         public async Task<IBusinessResult> GetInfomationForPartner(int restaurant)
         {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DineinEasy.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d80d9c81d9572f3d923d73a45defc3139028c53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d8acb47735e23883c778c444f0f0dd6976223fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("DineinEasy.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DineinEasy.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

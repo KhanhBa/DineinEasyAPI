@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DineinEasy.Service.Models.PartnerModels.PartnerModel;
 
 namespace DineinEasy.Service.Services
 {
@@ -79,7 +80,7 @@ namespace DineinEasy.Service.Services
         {
             var obj = await _unitOfWork.ReviewRepository.GetReviewsByRestaurantIdAsync(restaurantId);
             var result = _mapper.Map<List<ReviewPartner>>(obj);
-            return new BusinessResult(200, "Updated successfully", result);
+            return new BusinessResult(200, "Get Reviews", result);
         }
     }
 

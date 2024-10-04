@@ -12,6 +12,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using static DineinEasy.Service.Models.PartnerModels.PartnerModel;
 
 namespace DineinEasy.Service.Services
 {

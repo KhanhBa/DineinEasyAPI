@@ -21,7 +21,7 @@ namespace DineinEasy.Data.Repositories
         }
         public async Task<Review> GetReviewByIdAsync(int id)
         {
-            return await _context.Reviews.Where(x => x.Id == id).Include(x => x.ReviewImages).FirstOrDefaultAsync();
+            return await _context.Reviews.Where(x => x.Id==id).Include(x=>x.ReviewImages).FirstOrDefaultAsync();
         }
     }
 }

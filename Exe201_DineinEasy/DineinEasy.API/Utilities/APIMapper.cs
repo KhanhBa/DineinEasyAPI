@@ -8,6 +8,7 @@ using DineinEasy.Service.Models;
 using DineinEasy.API.RequestDTO.Customer;
 using DineinEasy.API.RequestDTO.PartnerDTO;
 using DineinEasy.Service.Models.PartnerModels;
+using static DineinEasy.Service.Models.PartnerModels.PartnerModel;
 
 namespace DineinEasy.API.Utilities
 {
@@ -22,6 +23,7 @@ namespace DineinEasy.API.Utilities
             BannerProfile();
             TimeFrameProfile();
             CustomerProfile();
+            ReviewProfile();
         }
 
         public void CustomerProfile()
@@ -44,23 +46,28 @@ namespace DineinEasy.API.Utilities
             CreateMap<Data.Models.Restaurant, RestaurantModel>()
                .ForMember(x => x.RestaurantImages, otp => otp.MapFrom(y => y.RestaurantImages))
                .ReverseMap();
+
             CreateMap<RestaurantImage, RestaurantImageModel>()
                 .ReverseMap();
-            CreateMap<RestaurantPartner, RestaurantModel>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+
+            CreateMap<RestaurantPartner, Restaurant>()
+                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
                  .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
                  .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address))
                  .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
                  .ForMember(dest => dest.Avatar, opt => opt.MapFrom(src => src.Avatar))
                  .ForMember(dest => dest.Latitude, opt => opt.MapFrom(src => double.Parse(src.Lastitude)))
                  .ForMember(dest => dest.Longitude, opt => opt.MapFrom(src => double.Parse(src.Longtitude)))
-                 .ForMember(dest => dest.TimeFrames, opt => opt.MapFrom(src => src.TimeFrames));
+                 .ForMember(dest => dest.TimeFrames, opt => opt.MapFrom(src => src.TimeFrames))
+                 .ReverseMap()
+                 ;
 
-            CreateMap<TimeFramePartner, TimeFrameModel>()
+            CreateMap<TimeFramePartner, TimeFrame>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
-                .ForMember(dest => dest.Day, opt => opt.MapFrom(src => src.Day.ToString("dddd")))
+                .ForMember(dest => dest.Day, opt => opt.MapFrom(src => src.Day))
                 .ForMember(dest => dest.OpenedTime, opt => opt.MapFrom(src => src.Open))
-                .ForMember(dest => dest.ClosedTime, opt => opt.MapFrom(src => src.Close));
+                .ForMember(dest => dest.ClosedTime, opt => opt.MapFrom(src => src.Close))
+                .ReverseMap();
         }
         public void UserProfile()
         {
@@ -96,20 +103,30 @@ namespace DineinEasy.API.Utilities
         public void ReviewProfile()
         {
             CreateMap<Review, ReviewModel>()
-                .ForMember(x => x.ReviewImages, otp => otp.MapFrom(x => x.ReviewImages))
+                .ForMember(dest => dest.ReviewImages, opt => opt.MapFrom(src => src.ReviewImages))
                 .ReverseMap();
+
             CreateMap<ReviewImage, ReviewImageModel>().ReverseMap();
-            CreateMap<CreatedReview,ReviewModel>()
-                .ForMember(x=>x.ReviewImages,otp => otp.MapFrom(x => x.Images)).ReverseMap();
+
+            CreateMap<CreatedReview, ReviewModel>()
+                .ForMember(dest => dest.ReviewImages, opt => opt.MapFrom(src => src.Images))
+                .ReverseMap();
+
             CreateMap<ReviewImage, CreatedImage>()
-                .ForMember(x => x.ImageUrl, otp => otp.MapFrom(x => x.ImageUrl)).ReverseMap();
+                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl))
+                .ReverseMap();
+
             CreateMap<UpdatedReview, ReviewModel>().ReverseMap();
             CreateMap<Review, ReviewPartner>()
-            .ForMember(dest => dest.People, opt => opt.MapFrom(src => src.Number))
-            .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Content))
-            .ForMember(dest => dest.Date, opt => opt.MapFrom(src => DateOnly.FromDateTime(src.CreateAt)))
-            .ForMember(dest => dest.Time, opt => opt.MapFrom(src => TimeOnly.FromDateTime(src.CreateAt)))
-            .ForMember(dest => dest.imageUrls, opt => opt.MapFrom(src => src.ReviewImages.Select(ri => ri.ImageUrl)));
+                    .ForMember(dest => dest.imageUrls, opt => opt.MapFrom(src => src.ReviewImages))
+                    .ForPath(dest => dest.Name,otp => otp.MapFrom(src => src.Customer.Name))
+                    .ForPath(dest => dest.Phone, otp => otp.MapFrom(src => src.Customer.Phone))
+                    .ReverseMap()
+                    ;
+                    
+            CreateMap<ReviewImage, ImageReview>()
+                .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.ImageUrl));
+             
         }
     }
 }

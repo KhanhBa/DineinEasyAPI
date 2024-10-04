@@ -51,21 +51,21 @@ namespace DineinEasy.Service.Services
         {
             var list = await _unitOfWork.TimeFrameRepository.GetAllAsync();
             var result = _mapper.Map<List<TimeFrameModel>>(list);
-            return new BusinessResult(200, "Get All TimeFrames");
+            return new BusinessResult(200, "Get All TimeFrames",result);
         }
 
         public async Task<IBusinessResult> GetTimeFrameById(int id)
         {
             var list = await _unitOfWork.TimeFrameRepository.GetByIdAsync(id);
             var result = _mapper.Map<TimeFrameModel>(list);
-            return new BusinessResult(200, "Get TimeFrame by Id");
+            return new BusinessResult(200, "Get TimeFrame by Id",result);
         }
 
         public async Task<IBusinessResult> GetTimeFramesByRestaurantId(int restaurantId)
         {
             var list = await _unitOfWork.TimeFrameRepository.GetTimeFramesByRestaurantId(restaurantId);
             var result = _mapper.Map<List<TimeFrameModel>>(list);
-            return new BusinessResult(200, "Get TimeFrames by RestaurantId");
+            return new BusinessResult(200, "Get TimeFrames by RestaurantId", result);
         }
 
         public async Task<IBusinessResult> UpdateTimeFrame(int Id, TimeFrameModel timeFrame)

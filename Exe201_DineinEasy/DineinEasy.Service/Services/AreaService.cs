@@ -3,7 +3,6 @@ using DineinEasy.Data.Models;
 using DineinEasy.Data.UnitOfWork;
 using DineinEasy.Service.Models;
 using DineinEasy.Service.Responses;
-using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;

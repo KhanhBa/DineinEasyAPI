@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Reflection.Emit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -62,73 +63,59 @@ public partial class EXE2_DineinEasyContext : DbContext
         return connectionString;
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer($"data source={serverName};initial catalog={dbName};user id={user};password={pass};trustservercertificate=true;multipleactiveresultsets=true;");
+    {
+       
+        optionsBuilder.UseNpgsql($"Host={serverName};Port=5432;Username={user};Password={pass};Database={dbName}");
 
+
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.HasDefaultSchema("public");
+
         modelBuilder.Entity<Area>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_Area_1");
-
             entity.ToTable("Area");
-
-            entity.Property(e => e.City)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.District)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.Ward)
-                .IsRequired()
-                .HasMaxLength(50);
+            entity.Property(e => e.City).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.District).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.Ward).IsRequired().HasMaxLength(50);
         });
 
         modelBuilder.Entity<Banner>(entity =>
         {
             entity.ToTable("Banner");
-
-            entity.Property(e => e.CreatedAt).HasColumnType("datetime");
-            entity.Property(e => e.ExpriedDate).HasColumnType("datetime");
+            entity.Property(e => e.CreatedAt).HasColumnType("timestamp");
+            entity.Property(e => e.ExpriedDate).HasColumnType("timestamp");
         });
 
         modelBuilder.Entity<Category>(entity =>
         {
             entity.ToTable("Category");
-
             entity.Property(e => e.Description).IsRequired();
-            entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(50);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
         });
 
         modelBuilder.Entity<Customer>(entity =>
         {
             entity.ToTable("Customer");
-
-            entity.Property(e => e.CreateAt).HasColumnType("datetime");
+            entity.Property(e => e.CreateAt).HasColumnType("timestamp");
             entity.Property(e => e.Email).IsRequired();
             entity.Property(e => e.ImageUrl).IsRequired();
             entity.Property(e => e.Name).IsRequired();
-            entity.Property(e => e.Password)
-                .IsRequired()
-                .HasMaxLength(20);
-            entity.Property(e => e.Phone)
-                .IsRequired()
-                .HasMaxLength(12);
+            entity.Property(e => e.Password).IsRequired().HasMaxLength(20);
+            entity.Property(e => e.Phone).IsRequired().HasMaxLength(12);
             entity.Property(e => e.Status).HasColumnName("status");
         });
 
         modelBuilder.Entity<Notification>(entity =>
         {
             entity.ToTable("Notification");
-
             entity.Property(e => e.Body).IsRequired();
-            entity.Property(e => e.CreatedAt).HasColumnType("datetime");
+            entity.Property(e => e.CreatedAt).HasColumnType("timestamp"); 
             entity.Property(e => e.ImageUrl).IsRequired();
             entity.Property(e => e.Title).IsRequired();
-            entity.Property(e => e.Type)
-                .IsRequired()
-                .HasMaxLength(50);
+            entity.Property(e => e.Type).IsRequired().HasMaxLength(50);
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Notifications)
                 .HasForeignKey(d => d.CustomerId)
@@ -136,13 +123,13 @@ public partial class EXE2_DineinEasyContext : DbContext
                 .HasConstraintName("FK_Notification_Customer");
         });
 
+
         modelBuilder.Entity<OrderBooking>(entity =>
         {
             entity.ToTable("OrderBooking");
-
-            entity.Property(e => e.BookingDate).HasColumnType("datetime");
-            entity.Property(e => e.BookingTime).HasColumnType("datetime");
-            entity.Property(e => e.CreatedAt).HasColumnType("datetime");
+            entity.Property(e => e.BookingDate).HasColumnType("timestamp"); 
+            entity.Property(e => e.BookingTime).HasColumnType("timestamp");
+            entity.Property(e => e.CreatedAt).HasColumnType("timestamp");
 
             entity.HasOne(d => d.Customer).WithMany(p => p.OrderBookings)
                 .HasForeignKey(d => d.CustomerId)
@@ -156,14 +143,11 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<OrderMembership>(entity =>
         {
             entity.ToTable("OrderMembership");
-
-            entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+            entity.Property(e => e.CreatedDate).HasColumnType("timestamp");
             entity.Property(e => e.Description).IsRequired();
-            entity.Property(e => e.ExpiredDate).HasColumnType("datetime");
+            entity.Property(e => e.ExpiredDate).HasColumnType("timestamp");
             entity.Property(e => e.ImageUrl).IsRequired();
-            entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(50);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
 
             entity.HasOne(d => d.Package).WithMany(p => p.OrderMemberships)
                 .HasForeignKey(d => d.PackageId)
@@ -179,30 +163,24 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<Package>(entity =>
         {
             entity.ToTable("Package");
-
-            entity.Property(e => e.CreateAt).HasColumnType("datetime");
+            entity.Property(e => e.CreateAt).HasColumnType("timestamp");
             entity.Property(e => e.Description).IsRequired();
             entity.Property(e => e.ImageUrl).IsRequired();
-            entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(50);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
         });
 
         modelBuilder.Entity<Restaurant>(entity =>
         {
             entity.ToTable("Restaurant");
-
             entity.Property(e => e.Address).IsRequired();
             entity.Property(e => e.Avatar).IsRequired();
-            entity.Property(e => e.CreateAt).IsRequired();
+            entity.Property(e => e.CreateAt).IsRequired().HasColumnType("timestamp");
             entity.Property(e => e.Description).IsRequired();
             entity.Property(e => e.Email).IsRequired();
             entity.Property(e => e.Name).IsRequired();
-            entity.Property(e => e.Phone)
-                .IsRequired()
-                .HasMaxLength(50);
+            entity.Property(e => e.Phone).IsRequired().HasMaxLength(50);
             entity.Property(e => e.Tags).IsRequired();
-            entity.Property(e => e.UpdateAt).HasColumnType("datetime");
+            entity.Property(e => e.UpdateAt).HasColumnType("timestamp");
 
             entity.HasOne(d => d.Area).WithMany(p => p.Restaurants)
                 .HasForeignKey(d => d.AreaId)
@@ -227,9 +205,8 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<Review>(entity =>
         {
             entity.ToTable("Review");
-
             entity.Property(e => e.Content).IsRequired();
-            entity.Property(e => e.CreateAt).HasColumnType("datetime");
+            entity.Property(e => e.CreateAt).HasColumnType("timestamp");
             entity.Property(e => e.Status).HasColumnName("status");
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Reviews)
@@ -246,7 +223,6 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<ReviewImage>(entity =>
         {
             entity.ToTable("ReviewImage");
-
             entity.Property(e => e.ImageUrl).IsRequired();
 
             entity.HasOne(d => d.Review).WithMany(p => p.ReviewImages)
@@ -273,9 +249,7 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<TimeFrame>(entity =>
         {
             entity.ToTable("TimeFrame");
-            entity.Property(e => e.Day)
-                .IsRequired()
-                .HasMaxLength(50);
+            entity.Property(e => e.Day).IsRequired().HasMaxLength(50);
 
             entity.HasOne(d => d.Restaurant).WithMany(p => p.TimeFrames)
                 .HasForeignKey(d => d.RestaurantId)
@@ -286,22 +260,12 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<User>(entity =>
         {
             entity.ToTable("User");
-
-            entity.Property(e => e.CreateAt).HasColumnType("datetime");
-            entity.Property(e => e.DateOfBirth).HasColumnType("datetime");
-            entity.Property(e => e.Email)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(30);
-            entity.Property(e => e.Password)
-                .IsRequired()
-                .HasMaxLength(10)
-                .IsFixedLength();
-            entity.Property(e => e.Phone)
-                .IsRequired()
-                .HasMaxLength(12);
+            entity.Property(e => e.CreateAt).HasColumnType("timestamp");
+            entity.Property(e => e.DateOfBirth).HasColumnType("timestamp");
+            entity.Property(e => e.Email).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(30);
+            entity.Property(e => e.Password).IsRequired().HasMaxLength(10).IsFixedLength();
+            entity.Property(e => e.Phone).IsRequired().HasMaxLength(12);
         });
 
         OnModelCreatingPartial(modelBuilder);

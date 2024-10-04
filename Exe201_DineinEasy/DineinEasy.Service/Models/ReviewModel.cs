@@ -18,10 +18,6 @@ public partial class ReviewModel
     public int RestaurantId { get; set; }
 
     public bool Status { get; set; }
-
-    public virtual CustomerModel Customer { get; set; }
-
-    public virtual RestaurantModel Restaurant { get; set; }
-
+   
     public virtual ICollection<ReviewImageModel> ReviewImages { get; set; } = new List<ReviewImageModel>();
 }

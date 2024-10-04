@@ -17,11 +17,11 @@ namespace DineinEasy.Data.Repositories
         }
         public async Task<List<Review>> GetReviewsByRestaurantIdAsync(int restaurantId)
         {
-            return await _context.Reviews.Where(x=>x.RestaurantId== restaurantId).Include(x=>x.ReviewImages).ToListAsync();
+            return await _context.Reviews.Where(x=>x.RestaurantId== restaurantId).Include(x=>x.ReviewImages).Include(x=>x.Customer).ToListAsync();
         }
         public async Task<Review> GetReviewByIdAsync(int id)
         {
-            return await _context.Reviews.Where(x => x.Id == id).Include(x => x.ReviewImages).FirstOrDefaultAsync();
+            return await _context.Reviews.Where(x => x.Id==id).Include(x=>x.ReviewImages).FirstOrDefaultAsync();
         }
     }
 }

@@ -2,6 +2,7 @@
 using DineinEasy.Data.Models;
 using DineinEasy.Data.UnitOfWork;
 using DineinEasy.Service.Models;
+using DineinEasy.Service.Models.PartnerModels;
 using DineinEasy.Service.Responses;
 using DineinEasy.Service.Untils;
 using System;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using static DineinEasy.Service.Models.PartnerModels.PartnerModel;
 
 namespace DineinEasy.Service.Services
 {
@@ -23,8 +25,9 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> GetRestaurantById(int id);
         Task<IBusinessResult> SignIn(string email, string password);
         public  Task<IBusinessResult> GetImageRestaurantById(int id);
+        Task<IBusinessResult> GetInfomationForPartner(int restaurant);
     }
-    public class RestaurantService:IRestaurantService
+    public class RestaurantService : IRestaurantService
     {
         private UnitOfWork _unitOfWork;
         private IMapper _mapper;
@@ -139,5 +142,15 @@ namespace DineinEasy.Service.Services
             return new BusinessResult(200, "Get restaurant's images successfully", result);
         }
 
+
+        public async Task<IBusinessResult> GetInfomationForPartner(int restaurant)
+        {
+            var obj = await _unitOfWork.RestaurantRepository.GetRestaurantForPartner(restaurant);
+            if (obj == null) {
+                new BusinessResult(400, "Can not find Restaurant");
+            }
+            var result = _mapper.Map<RestaurantPartner>(obj);
+            return new BusinessResult(200, "Get Restaurant by Id successfully", result);
+        }
     }
 }

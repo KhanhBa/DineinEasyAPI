@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DineinEasy.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72a93b5a085392b9eaad8ca8ed33f4c85d730c6d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0a424018a91433f74caee44cbec7639f5978434")]
 [assembly: System.Reflection.AssemblyProductAttribute("DineinEasy.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DineinEasy.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -73,6 +73,10 @@ namespace DineinEasy.Service.Services
             var result = _mapper.Map<Review>(updated);
             return new BusinessResult(200, "Updated successfully", result);
         }
+        public async Task<IBusinessResult> GetReviewsForPartner(int restaurantId)
+        {
+            return new BusinessResult(200, "Updated successfully");
+        }
     }
 
 }

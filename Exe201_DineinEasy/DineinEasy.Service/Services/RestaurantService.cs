@@ -22,6 +22,7 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> GetAllRestaurants();
         Task<IBusinessResult> GetRestaurantById(int id);
         Task<IBusinessResult> SignIn(string email, string password);
+        public  Task<IBusinessResult> GetImageRestaurantById(int id);
     }
     public class RestaurantService:IRestaurantService
     {
@@ -128,5 +129,15 @@ namespace DineinEasy.Service.Services
                 };
             
         }
+
+        public async Task<IBusinessResult> GetImageRestaurantById(int id)
+        {
+            var obj = await _unitOfWork.RestaurantImageRepository.FindByConditionAsync(x=>x.RestaurantId==id);
+            if (obj == null)
+            { return new BusinessResult(404, "Can not find restaurant's images"); }
+            var result = _mapper.Map<List<RestaurantImageModel>>(obj);
+            return new BusinessResult(200, "Get restaurant's images successfully", result);
+        }
+
     }
 }

@@ -25,6 +25,7 @@ namespace DineinEasy.Data.UnitOfWork
         private UserRepository _user;
         private AreaRepository _area;
         private BannerRepository _banner;
+        private RestaurantImageRepository _restaurantImage;
 
         public UnitOfWork()
         {
@@ -33,6 +34,13 @@ namespace DineinEasy.Data.UnitOfWork
         public UnitOfWork(EXE2_DineinEasyContext context)
         {
             _context ??= context;
+        }
+        public RestaurantImageRepository RestaurantImageRepository
+        {
+            get
+            {
+                return _restaurantImage ??= new RestaurantImageRepository();
+            }
         }
         public CustomerRepository CustomerRepository
         {

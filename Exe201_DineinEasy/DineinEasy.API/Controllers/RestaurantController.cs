@@ -104,7 +104,7 @@ namespace DineinEasy.API.Controllers
         {
             try
             {
-                var result = await _restaurantService.GetRestaurantById(id);
+                var result = await _restaurantService.GetInfomationForPartner(id);
                 return StatusCode(result.Status, result);
             }
             catch (Exception ex)

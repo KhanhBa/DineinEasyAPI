@@ -2,6 +2,7 @@
 using DineinEasy.Data.Models;
 using DineinEasy.Data.UnitOfWork;
 using DineinEasy.Service.Models;
+using DineinEasy.Service.Models.PartnerModels;
 using DineinEasy.Service.Responses;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> DeleteReview(int Id);
         Task<IBusinessResult> CreateReview(ReviewModel moder);
         Task<IBusinessResult> GetReviewsByRestaurantId(int restaurantId);
+        Task<IBusinessResult> GetReviewsForPartner(int restaurantId);
     }
     public class ReviewService : IReviewService
     {
@@ -75,7 +77,9 @@ namespace DineinEasy.Service.Services
         }
         public async Task<IBusinessResult> GetReviewsForPartner(int restaurantId)
         {
-            return new BusinessResult(200, "Updated successfully");
+            var obj = await _unitOfWork.ReviewRepository.GetReviewsByRestaurantIdAsync(restaurantId);
+            var result = _mapper.Map<List<ReviewPartner>>(obj);
+            return new BusinessResult(200, "Updated successfully", result);
         }
     }
 

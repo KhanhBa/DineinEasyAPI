@@ -2,6 +2,7 @@
 using DineinEasy.Data.Models;
 using DineinEasy.Data.UnitOfWork;
 using DineinEasy.Service.Models;
+using DineinEasy.Service.Models.PartnerModels;
 using DineinEasy.Service.Responses;
 using DineinEasy.Service.Untils;
 using System;
@@ -22,8 +23,9 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> GetAllRestaurants();
         Task<IBusinessResult> GetRestaurantById(int id);
         Task<IBusinessResult> SignIn(string email, string password);
+        Task<IBusinessResult> GetInfomationForPartner(int restaurant);
     }
-    public class RestaurantService:IRestaurantService
+    public class RestaurantService : IRestaurantService
     {
         private UnitOfWork _unitOfWork;
         private IMapper _mapper;
@@ -127,6 +129,16 @@ namespace DineinEasy.Service.Services
                     Message = "signing in successfully."
                 };
             
+        }
+
+        public async Task<IBusinessResult> GetInfomationForPartner(int restaurant)
+        {
+            var obj = await _unitOfWork.RestaurantRepository.GetRestaurantForPartner(restaurant);
+            if (obj == null) {
+                new BusinessResult(400, "Can not find Restaurant");
+            }
+            var result = _mapper.Map<RestaurantPartner>(obj);
+            return new BusinessResult(200, "Get Restaurant by Id successfully", result);
         }
     }
 }

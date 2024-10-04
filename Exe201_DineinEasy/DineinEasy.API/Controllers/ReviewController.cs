@@ -85,5 +85,18 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("partner/review/{id}")]
+        public async Task<ActionResult<IBusinessResult>> GetForPartner([FromRoute] int id)
+        {
+            try
+            {
+                var result = await _reviewService.GetReviewsForPartner(id);
+                return StatusCode(result.Status, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

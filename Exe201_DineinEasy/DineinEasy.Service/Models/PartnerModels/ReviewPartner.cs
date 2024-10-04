@@ -16,7 +16,7 @@ namespace DineinEasy.Service.Models.PartnerModels
         public int People { get; set; }
         public int Review { get; set; }
         public string Description { get; set; }
-        public List<String> imageUrls { get; set; }
+        public List<string> imageUrls { get; set; }
     }
 
     public class TimeFramePartner
@@ -27,7 +27,7 @@ namespace DineinEasy.Service.Models.PartnerModels
         public TimeOnly Close { get; set; }
     }
 
-    public class Restaurant
+    public class RestaurantPartner
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -37,6 +37,7 @@ namespace DineinEasy.Service.Models.PartnerModels
         public string Description { get; set; }
         public TimeOnly Hour { get; set; }
         public string Avatar { get; set; }
+        public List<TimeFramePartner> TimeFrames { get;set;}
     }
     public class ImageOfRestaurant
     {

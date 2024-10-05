@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DineinEasy.Data.Models;
 
@@ -16,4 +17,7 @@ public partial class Banner
     public string ImageUrl { get; set; }
 
     public bool? Status { get; set; }
+    public int RestaurantId {  get; set; }
+    [ForeignKey(nameof(RestaurantId))]
+    public virtual Restaurant Restaurant { get; set; }
 }

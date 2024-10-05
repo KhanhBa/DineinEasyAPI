@@ -9,6 +9,7 @@ public partial class BannerModel
     public DateTime? CreatedAt { get; set; }
 
     public string ImageUrl { get; set; }
+    public int RestaurantId { get; set; }
 
     public bool? Status { get; set; }
 }

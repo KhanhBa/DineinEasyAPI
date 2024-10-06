@@ -24,6 +24,7 @@ namespace DineinEasy.API.Utilities
             TimeFrameProfile();
             CustomerProfile();
             ReviewProfile();
+            OrderBookingProfile();
 
         }
 

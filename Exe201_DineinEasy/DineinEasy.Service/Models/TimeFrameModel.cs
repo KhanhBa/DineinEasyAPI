@@ -15,5 +15,4 @@ public partial class TimeFrameModel
 
     public int RestaurantId { get; set; }
 
-    public virtual RestaurantModel Restaurant { get; set; }
 }

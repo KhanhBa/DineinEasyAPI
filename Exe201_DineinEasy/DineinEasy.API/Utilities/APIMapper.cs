@@ -24,6 +24,7 @@ namespace DineinEasy.API.Utilities
             TimeFrameProfile();
             CustomerProfile();
             ReviewProfile();
+
         }
 
         public void CustomerProfile()
@@ -127,6 +128,10 @@ namespace DineinEasy.API.Utilities
             CreateMap<ReviewImage, ImageReview>()
                 .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.ImageUrl));
              
+        }
+        public void ImageRestaurantProfile()
+        {
+            CreateMap<RestaurantImage,RestaurantImageModel>().ReverseMap();
         }
     }
 }

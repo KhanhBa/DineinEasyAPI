@@ -8,5 +8,4 @@ public partial class RestaurantImageModel
 
     public int? RestaurantId { get; set; }
 
-    public virtual RestaurantModel Restaurant { get; set; }
 }

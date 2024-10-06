@@ -65,7 +65,6 @@ namespace DineinEasy.Service.Services
             var result = _mapper.Map<BannerModel>(obj);
             return new BusinessResult(200, "Get Banner by Id successfully", result);
         }
-
         public async Task<IBusinessResult> UpdateBanner(int Id, BannerModel model)
         {
             var obj = await _unitOfWork.BannerRepository.GetByIdAsync(Id);

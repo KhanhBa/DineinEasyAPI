@@ -18,7 +18,7 @@ namespace DineinEasy.API.Controllers
             _mapper = mapper;
             _reviewService = reviewService;
         }
-        [HttpGet("review/restaurant/{id}")]
+        [HttpGet("review/restaurants/{id}")]
         public async Task<ActionResult<IBusinessResult>> GetReviewsbyRestaurantId([FromRoute] int id)
         {
             try

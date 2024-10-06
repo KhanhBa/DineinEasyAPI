@@ -24,6 +24,7 @@ namespace DineinEasy.API.Utilities
             TimeFrameProfile();
             CustomerProfile();
             ReviewProfile();
+
         }
 
         public void OrderBookingProfile()
@@ -60,9 +61,8 @@ namespace DineinEasy.API.Utilities
                  .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address))
                  .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
                  .ForMember(dest => dest.Avatar, opt => opt.MapFrom(src => src.Avatar))
-                 .ForMember(dest => dest.Latitude, opt => opt.MapFrom(src => src.Lastitude))
+                 .ForMember(dest => dest.Latitude, opt => opt.MapFrom(src => src.Latitude))
                  .ForMember(dest => dest.Longitude, opt => opt.MapFrom(src => src.Longtitude))
-                 .ForMember(dest => dest.TimeFrames, opt => opt.MapFrom(src => src.TimeFrames))
                  .ReverseMap()
                  ;
 
@@ -131,6 +131,10 @@ namespace DineinEasy.API.Utilities
             CreateMap<ReviewImage, ImageReview>()
                 .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.ImageUrl));
              
+        }
+        public void ImageRestaurantProfile()
+        {
+            CreateMap<RestaurantImage,RestaurantImageModel>().ReverseMap();
         }
     }
 }

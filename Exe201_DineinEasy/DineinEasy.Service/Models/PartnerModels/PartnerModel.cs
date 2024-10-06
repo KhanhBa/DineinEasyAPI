@@ -32,12 +32,10 @@ namespace DineinEasy.Service.Models.PartnerModels
             public int Id { get; set; }
             public string Name { get; set; }
             public string Address { get; set; }
-            public double Lastitude { get; set; }
+            public double Latitude { get; set; }
             public double Longtitude { get; set; }
             public string Description { get; set; }
-            public TimeOnly Hour { get; set; }
             public string Avatar { get; set; }
-            public List<TimeFramePartner> TimeFrames { get; set; }
         }
         public class ImageOfRestaurant
         {

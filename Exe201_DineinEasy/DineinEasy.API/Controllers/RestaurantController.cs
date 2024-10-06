@@ -167,5 +167,18 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("partner/restaurants/{id}/images")]
+        public async Task<ActionResult<IBusinessResult>> GetImages([FromRoute] int id)
+        {
+            try
+            {
+                var result = await _restaurantService.GetImageRestaurantById(id);
+                return StatusCode(result.Status, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

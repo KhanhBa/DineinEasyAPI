@@ -30,7 +30,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpPost("timeframe")]
+        [HttpPost("timeframes")]
         public async Task<ActionResult<IBusinessResult>> Create([FromBody] CreatedTimeFrame dto)
         {
             try
@@ -44,7 +44,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpPut("timeframe/{id}")]
+        [HttpPut("timeframes/{id}")]
         public async Task<ActionResult<IBusinessResult>> Update([FromBody] UpdatedTimeFrame dto, [FromRoute] int id)
         {
             try
@@ -58,7 +58,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpGet("timeframe/{id}")]
+        [HttpGet("timeframes/{id}")]
         public async Task<ActionResult<IBusinessResult>> GetByid([FromRoute] int id)
         {
             try
@@ -71,7 +71,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpDelete("timeframe/{id}")]
+        [HttpDelete("timeframes/{id}")]
         public async Task<ActionResult<IBusinessResult>> DeleteByid([FromRoute] int id)
         {
             try
@@ -84,7 +84,7 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpGet("timeframe/restaurant/{id}")]
+        [HttpGet("timeframes/restaurant/{id}")]
         public async Task<ActionResult<IBusinessResult>> GetByRestaurantId([FromRoute] int id)
         {
             try

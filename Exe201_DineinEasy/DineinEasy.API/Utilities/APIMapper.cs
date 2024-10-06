@@ -59,7 +59,6 @@ namespace DineinEasy.API.Utilities
                  .ForMember(dest => dest.Avatar, opt => opt.MapFrom(src => src.Avatar))
                  .ForMember(dest => dest.Latitude, opt => opt.MapFrom(src => src.Latitude))
                  .ForMember(dest => dest.Longitude, opt => opt.MapFrom(src => src.Longtitude))
-                 .ForMember(dest => dest.TimeFrames, opt => opt.MapFrom(src => src.TimeFrames))
                  .ReverseMap()
                  ;
 

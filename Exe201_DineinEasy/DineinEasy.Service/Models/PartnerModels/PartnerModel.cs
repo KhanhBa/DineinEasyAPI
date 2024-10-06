@@ -36,7 +36,6 @@ namespace DineinEasy.Service.Models.PartnerModels
             public double Longtitude { get; set; }
             public string Description { get; set; }
             public string Avatar { get; set; }
-            public List<TimeFramePartner> TimeFrames { get; set; }
         }
         public class ImageOfRestaurant
         {

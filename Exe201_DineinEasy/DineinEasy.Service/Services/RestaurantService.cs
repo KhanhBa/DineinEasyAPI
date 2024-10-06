@@ -28,6 +28,8 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> GetInfomationForPartner(int restaurant);
         Task<IBusinessResult> GetReviewsRestaurantById(int id);
         public Task<IBusinessResult> GetBannersByRestaurantId(int id);
+
+        public Task<IBusinessResult> ChangeStatus(int id, int status);
     }
     public class RestaurantService : IRestaurantService
     {
@@ -171,6 +173,16 @@ namespace DineinEasy.Service.Services
             }
             var result = _mapper.Map<RestaurantPartner>(obj);
             return new BusinessResult(200, "Get Restaurant by Id successfully", result);
+        }
+
+        public async Task<IBusinessResult> ChangeStatus(int id, int status)
+        {
+            var obj = await _unitOfWork.RestaurantRepository.GetByIdAsync(id);
+            if (obj == null) { return new BusinessResult(404, "Can not find Restaurant"); }
+            obj.Status = status == 1;
+            var updated = await _unitOfWork.RestaurantRepository.UpdateAsync(obj);
+            var result = _mapper.Map<RestaurantModel>(obj);
+            return new BusinessResult(200, "Update successfully", result);
         }
     }
 }

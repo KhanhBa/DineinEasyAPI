@@ -139,6 +139,21 @@ namespace DineinEasy.API.Controllers
             }
         }
 
+        [HttpPut("restaurants/{id}/status/{status}")]
+        public async Task<ActionResult<IBusinessResult>> ChangeStatus([FromRoute] int id, [FromRoute] int status)
+        {
+            try
+            {
+                var result = await _restaurantService.ChangeStatus(id,status);
+                return StatusCode(result.Status, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+
         [HttpGet("partner/restaurants/{id}")]
         public async Task<ActionResult<IBusinessResult>> GetForPartnerByid([FromRoute] int id)
         {

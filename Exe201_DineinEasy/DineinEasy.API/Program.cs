@@ -33,6 +33,7 @@ namespace DineinEasy.API
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ICustomerService, CustomerService>();
             builder.Services.AddScoped<IReviewService, ReviewService>();
+            builder.Services.AddScoped<IOrderBookingService, OrderBookingService>();
 
             builder.Services.AddControllers().AddJsonOptions(options =>
             {

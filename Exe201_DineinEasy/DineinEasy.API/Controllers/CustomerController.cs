@@ -59,6 +59,24 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpPut("customers/{id}/status/{status}")]
+        public async Task<ActionResult<IBusinessResult>> Update([FromRoute] int status, [FromRoute] int id)
+        {
+            try
+            {
+                var result = await _customerService.ChangeStatus(status, id);
+                return StatusCode(result.Status, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+
+
+
         [HttpGet("customers/{id}")]
         public async Task<ActionResult<IBusinessResult>> GetByid([FromRoute] int id)
         {

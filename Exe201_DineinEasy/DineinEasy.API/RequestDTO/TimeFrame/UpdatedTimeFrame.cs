@@ -4,9 +4,12 @@
     {
         public string Day { get; set; }
 
-        public TimeOnly OpenedTime { get; set; }
+        public string OpenedTime { get; set; }
 
-        public TimeOnly ClosedTime { get; set; }
+        public string ClosedTime { get; set; }
 
+        public TimeOnly GetOpenedTime() => TimeOnly.Parse(OpenedTime);
+
+        public TimeOnly GetClosedTime() => TimeOnly.Parse(ClosedTime);
     }
 }

@@ -35,7 +35,7 @@ namespace DineinEasy.API.Controllers
         {
             try
             {
-                var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.OpenedTime, ClosedTime = dto.ClosedTime,RestaurantId=dto.RestaurantId };
+                var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.GetOpenedTime(), ClosedTime = dto.GetClosedTime(),RestaurantId=dto.RestaurantId };
                 var result = await _timeFrameService.CreateTimeFrame(obj);
                 return StatusCode(result.Status, result);
             }
@@ -49,7 +49,7 @@ namespace DineinEasy.API.Controllers
         {
             try
             {
-                var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.OpenedTime, ClosedTime = dto.ClosedTime };
+                var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.GetOpenedTime(), ClosedTime = dto.GetClosedTime() };
                 var result = await _timeFrameService.UpdateTimeFrame(id,obj);
                 return StatusCode(result.Status, result);
             }

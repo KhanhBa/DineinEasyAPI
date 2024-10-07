@@ -24,9 +24,14 @@ namespace DineinEasy.API.Utilities
             TimeFrameProfile();
             CustomerProfile();
             ReviewProfile();
+            OrderBookingProfile();
 
         }
 
+        public void OrderBookingProfile()
+        {
+            CreateMap<OrderBooking, OrderBookingModel>().ReverseMap();
+        }
         public void CustomerProfile()
         {
             CreateMap<Customer, CustomerModel>().ReverseMap();

@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace DineinEasy.Service.Models.PartnerModels
@@ -35,6 +37,7 @@ namespace DineinEasy.Service.Models.PartnerModels
             public double Latitude { get; set; }
             public double Longtitude { get; set; }
             public string Description { get; set; }
+            [JsonPropertyName("AvatarUrl")]
             public string Avatar { get; set; }
         }
         public class ImageOfRestaurant

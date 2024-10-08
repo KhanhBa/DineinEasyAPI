@@ -180,5 +180,18 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+            [HttpPost("restaurants/{id}/partners/images/")]
+            public async Task<ActionResult<IBusinessResult>> Create([FromBody] List<RestaurantImageModel> dto, [FromRoute] int id)
+            {
+                try
+                {
+                    var result = await _restaurantService.ChangeImageRestaurant(id,dto);
+                    return Ok(result);
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, ex.Message);
+                }
+            }
+        }
     }
-}

@@ -29,6 +29,7 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> GetReviewsRestaurantById(int id);
         public Task<IBusinessResult> GetBannersByRestaurantId(int id);
         Task<IBusinessResult> GetImagesByRestaurantId(int id);
+        Task<IBusinessResult> ChangeImageRestaurant(int restaurantId , List<RestaurantImageModel> list);
 
         public Task<IBusinessResult> ChangeStatus(int id, int status);
     }
@@ -193,6 +194,21 @@ namespace DineinEasy.Service.Services
             }
             var result = _mapper.Map<List<RestaurantImage>>(obj);
             return new BusinessResult(200, "Get Images by Id successfully", result);
+        }
+
+        public async Task<IBusinessResult> ChangeImageRestaurant(int restaurantId, List<RestaurantImageModel> list)
+        {
+            await _unitOfWork.RestaurantImageRepository.DeleteAllImage(restaurantId);
+            var result = new List<RestaurantImageModel>();
+            foreach (var image in list) { 
+                var obj = _mapper.Map<RestaurantImage>(image);
+                obj.RestaurantId = restaurantId;
+                obj.Id = 0;
+                var newObj = await _unitOfWork.RestaurantImageRepository.CreateAsync(obj);
+                result.Add(_mapper.Map<RestaurantImageModel>(newObj));
+            }
+            _unitOfWork.RestaurantRepository.Save();
+            return new BusinessResult(200, "Change successfully", result);
         }
     }
 }

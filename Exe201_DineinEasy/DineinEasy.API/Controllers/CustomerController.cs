@@ -116,5 +116,18 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("customers/dashboard")]
+        public async Task<ActionResult<IBusinessResult>> GetDashboardCustomer()
+        {
+            try
+            {
+                var result = await _customerService.DashboardCustomer();
+                return StatusCode(200, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

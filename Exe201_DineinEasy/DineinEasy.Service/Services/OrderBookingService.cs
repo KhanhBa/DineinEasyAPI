@@ -16,7 +16,9 @@ namespace DineinEasy.Service.Services
 /*        Task<IBusinessResult> CreateOrderBooking(OrderBookingModel areaModel);
         Task<IBusinessResult> UpdateOrderBooking(int Id, OrderBookingModel areaModel);*/
         Task<IBusinessResult> GetOrderBookingById(int id);
-   /*     Task<IBusinessResult> DeleteOrderBookingbyId(int id);*/
+        /*     Task<IBusinessResult> DeleteOrderBookingbyId(int id);*/
+        Task<IBusinessResult> GetDashBoardForAdmin();
+        Task<IBusinessResult> GetDashBoardForPartner(int restaurantId);
     }
     public class OrderBookingService : IOrderBookingService
     {
@@ -37,11 +39,23 @@ namespace DineinEasy.Service.Services
             return result;
         }
 
+        public async Task<IBusinessResult> GetDashBoardForAdmin()
+        {
+            var obj = await _unitOfWork.OrderBookingRepository.GetNewOrderBookings();
+            return new BusinessResult(200, "Get Dashboard Admin Successfully", obj);
+        }
+
+        public async Task<IBusinessResult> GetDashBoardForPartner(int restaurantId)
+        {
+            var obj = await _unitOfWork.OrderBookingRepository.GetNewOrderBookingsbyRestaurantId(restaurantId);
+            return new BusinessResult(200, "Get Dashboard Partner Successfully", obj);
+        }
+
         public async Task<IBusinessResult> GetOrderBookingById(int id)
         {
             var area = await _unitOfWork.OrderBookingRepository.GetByIdAsync(id);
             if (area == null)
-            { return new BusinessResult(404, "Can not find Area"); }
+            { return new BusinessResult(404, "Can not find OrderBooking"); }
             var result = _mapper.Map<OrderBookingModel>(area);
             return new BusinessResult(200, "Get order booking by Id successfully", result);
         }

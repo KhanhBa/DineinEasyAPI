@@ -100,12 +100,14 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Customer");
             entity.Property(e => e.CreateAt).HasColumnType("timestamp");
+            entity.Property(e => e.UpdatedAt).HasColumnType("timestamp");
+            entity.Property(e => e.DateOfBirth).HasColumnType("timestamp");
             entity.Property(e => e.Email).IsRequired();
             entity.Property(e => e.ImageUrl).IsRequired();
             entity.Property(e => e.Name).IsRequired();
             entity.Property(e => e.Password).IsRequired().HasMaxLength(20);
             entity.Property(e => e.Phone).IsRequired().HasMaxLength(12);
-            entity.Property(e => e.Status).HasColumnName("status");
+            entity.Property(e => e.Status).HasColumnName("Status");
         });
 
         modelBuilder.Entity<Notification>(entity =>

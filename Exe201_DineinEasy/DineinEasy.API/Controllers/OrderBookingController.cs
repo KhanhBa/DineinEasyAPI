@@ -40,5 +40,31 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("dashboard/admin")]
+        public async Task<ActionResult<IBusinessResult>> GetDashboardAdminBooking()
+        {
+            try
+            {
+                var list = await _orderBookingService.GetDashBoardForAdmin();
+                return StatusCode(list.Status, list);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpGet("dashboard/partner/{id}")]
+        public async Task<ActionResult<IBusinessResult>> GetDashboardPartnerBooking([FromRoute]int id)
+        {
+            try
+            {
+                var list = await _orderBookingService.GetDashBoardForPartner(id);
+                return StatusCode(list.Status, list);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

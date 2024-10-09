@@ -23,6 +23,7 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> GetCustomerById(int id);
         Task<IBusinessResult> SignIn(string email, string password);
         Task<IBusinessResult> ChangeStatus(int status, int id);
+        Task<IBusinessResult> DashboardCustomer();
     }
     public class CustomerService : ICustomerService
     {
@@ -138,6 +139,12 @@ namespace DineinEasy.Service.Services
             var updated = await _unitOfWork.CustomerRepository.UpdateAsync(obj);
             var result = _mapper.Map<CustomerModel>(obj);
             return new BusinessResult(200, "Update successfully", result);
+        }
+
+        public async Task<IBusinessResult> DashboardCustomer()
+        {
+            var obj = await _unitOfWork.CustomerRepository.GetNewCustomers();
+            return new BusinessResult(200, "Get Dashboard Successfully", obj);
         }
     }
 }

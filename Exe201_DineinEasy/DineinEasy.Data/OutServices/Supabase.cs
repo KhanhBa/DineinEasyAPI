@@ -87,7 +87,33 @@ namespace DineinEasy.Data.OutServices
                 throw new Exception($"Failed to upload file: {ex.Message}");
             }
         }
+        public async Task<List<string>> ListFilesInBucket(string bucketName)
+        {
+            if (string.IsNullOrEmpty(bucketName))
+                throw new ArgumentException("Bucket name cannot be empty", nameof(bucketName));
 
+            await EnsureInitialized();
+            var storage = supabase.Storage;
+            var bucketClient = storage.From(bucketName);
+
+            try
+            {
+                var files = await bucketClient.List();
+                var fileUrls = new List<string>();
+
+                foreach (var file in files)
+                {
+                    var fileUrl = $"{url}/storage/v1/object/public/{bucketName}/{file.Name}";
+                    fileUrls.Add(fileUrl);
+                }
+
+                return fileUrls;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to list files in bucket: {ex.Message}");
+            }
+        }
     }
 }
 

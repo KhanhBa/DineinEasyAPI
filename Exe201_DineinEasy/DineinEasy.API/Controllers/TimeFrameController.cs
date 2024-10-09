@@ -5,6 +5,7 @@ using DineinEasy.Service.Models;
 using DineinEasy.Service.Responses;
 using DineinEasy.Service.Services;
 using Microsoft.AspNetCore.Mvc;
+using static DineinEasy.Service.Models.PartnerModels.PartnerModel;
 
 namespace DineinEasy.API.Controllers
 {
@@ -35,7 +36,7 @@ namespace DineinEasy.API.Controllers
         {
             try
             {
-                var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.OpenedTime, ClosedTime = dto.ClosedTime,RestaurantId=dto.RestaurantId };
+                var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.GetOpenedTime(), ClosedTime = dto.GetClosedTime(), RestaurantId = dto.RestaurantId };
                 var result = await _timeFrameService.CreateTimeFrame(obj);
                 return StatusCode(result.Status, result);
             }
@@ -49,8 +50,8 @@ namespace DineinEasy.API.Controllers
         {
             try
             {
-                var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.OpenedTime, ClosedTime = dto.ClosedTime };
-                var result = await _timeFrameService.UpdateTimeFrame(id,obj);
+                var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.GetOpenedTime(), ClosedTime = dto.GetClosedTime() };
+                var result = await _timeFrameService.UpdateTimeFrame(id, obj);
                 return StatusCode(result.Status, result);
             }
             catch (Exception ex)
@@ -95,6 +96,33 @@ namespace DineinEasy.API.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpPost("timeframes/partners/{id}")]
+        public async Task<ActionResult<IBusinessResult>> ChangeTimeframeByPartner([FromBody] List<TimeFrameChange> list, [FromRoute] int id)
+        {
+            try
+            {
+                foreach (var dto in list)
+                {
+                    if (dto.Id == 0)
+                    {
+                    var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.GetOpenedTime(), ClosedTime = dto.GetClosedTime(), RestaurantId = id };
+                    var rs = await _timeFrameService.CreateTimeFrame(obj);
+                    }
+                    else
+                    {
+                    var obj = new TimeFrameModel { Day = dto.Day, OpenedTime = dto.GetOpenedTime(), ClosedTime = dto.GetClosedTime() };
+                    await _timeFrameService.UpdateTimeFrame(id, obj);
+                    }
+                }
+                var result = await _timeFrameService.GetTimeFramesByRestaurantId(id);
+                return StatusCode(result.Status, result);
+
+            }
+            catch (Exception ex)
+            { 
+             return StatusCode(500, ex.Message);
             }
         }
     }

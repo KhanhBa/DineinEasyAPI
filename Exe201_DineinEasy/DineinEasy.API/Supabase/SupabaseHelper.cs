@@ -42,5 +42,7 @@ namespace DineinEasy.API.Supabase
 
             return result.ToString();
         }
+
     }
+
 }

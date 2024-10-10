@@ -18,6 +18,8 @@ public partial class Customer
     public string Password { get; set; }
 
     public DateTime CreateAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+    public DateTime? DateOfBirth { get; set; }
 
     public string ImageUrl { get; set; }
 

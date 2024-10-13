@@ -7,7 +7,7 @@ namespace DineinEasy.Data.Models;
 
 public partial class Customer
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; } = new Guid();
 
     public string Name { get; set; }
 
@@ -17,7 +17,7 @@ public partial class Customer
 
     public string Password { get; set; }
 
-    public DateTime CreateAt { get; set; }
+    public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
     public DateTime? DateOfBirth { get; set; }
 

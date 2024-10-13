@@ -10,7 +10,7 @@ public partial class Banner
 {
     public int Id { get; set; }
 
-    public DateTime? ExpriedDate { get; set; }
+    public DateTime? ExpiredDate { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 

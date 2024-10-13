@@ -15,7 +15,7 @@ public partial class Package
 
     public string ImageUrl { get; set; }
 
-    public int ValueDays { get; set; }
+    public int ValidDays { get; set; }
 
     public double Price { get; set; }
 
@@ -23,7 +23,7 @@ public partial class Package
 
     public bool Status { get; set; }
 
-    public DateTime CreateAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     public virtual ICollection<OrderMembership> OrderMemberships { get; set; } = new List<OrderMembership>();
 }

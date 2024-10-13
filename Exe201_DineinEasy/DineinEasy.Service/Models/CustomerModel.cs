@@ -2,7 +2,7 @@
 
 public partial class CustomerModel
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; } 
 
     public string Name { get; set; }
 
@@ -10,11 +10,14 @@ public partial class CustomerModel
 
     public string Phone { get; set; }
 
-    public DateTime CreateAt { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+    public DateTime? DateOfBirth { get; set; }
 
     public string ImageUrl { get; set; }
 
-    public bool Status { get; set; } = true;
+    public bool Status { get; set; }
+
 
     public virtual ICollection<NotificationModel> Notifications { get; set; } = new List<NotificationModel>();
 

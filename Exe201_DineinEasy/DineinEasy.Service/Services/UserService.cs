@@ -127,8 +127,8 @@ namespace DineinEasy.Service.Services
                 };
             var user = users.FirstOrDefault();
 
-            JwtSecurityToken accessJwtSecurityToken = JWTHelper.GetToken("USER", user.Id, user.Name, user.Email, 1);
-            JwtSecurityToken refreshJwtSecurityToken = JWTHelper.GetToken("USER", user.Id, user.Name, user.Email, 3);
+            JwtSecurityToken accessJwtSecurityToken = JWTHelper.GetToken("USER", user.Id, user.Name, user.Email, 1,null);
+            JwtSecurityToken refreshJwtSecurityToken = JWTHelper.GetToken("USER", user.Id, user.Name, user.Email, 3, null);
 
             SignInModel<UserModel> signInModel = new SignInModel<UserModel>()
             {

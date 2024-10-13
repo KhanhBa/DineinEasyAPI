@@ -15,10 +15,10 @@ public partial class EXE2_DineinEasyContext : DbContext
     {
     }
 
-    string user = Environment.GetEnvironmentVariable("DB_USER");
-    string pass = Environment.GetEnvironmentVariable("DB_PASSWORD");
-    string serverName = Environment.GetEnvironmentVariable("DB_SERVER");
-    string dbName = Environment.GetEnvironmentVariable("DB_NAME");
+    string user =/* Environment.GetEnvironmentVariable("DB_USER");*/  "postgres.jkpkuxfzllblbvmogkxo";
+    string pass = /*Environment.GetEnvironmentVariable("DB_PASSWORD");*/ "lequockhanh@503";
+    string serverName = /*Environment.GetEnvironmentVariable("DB_SERVER");*/ "aws-0-ap-southeast-1.pooler.supabase.com";
+    string dbName = /*Environment.GetEnvironmentVariable("DB_NAME");*/ "postgres";
 
     public EXE2_DineinEasyContext() { }
 
@@ -65,7 +65,7 @@ public partial class EXE2_DineinEasyContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
        
-        optionsBuilder.UseNpgsql($"Host={serverName};Port=5432;Username={user};Password={pass};Database={dbName}");
+        optionsBuilder.UseNpgsql($"Host={serverName};Port=6543;Username={user};Password={pass};Database={dbName}");
 
 
     }
@@ -86,7 +86,7 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Banner");
             entity.Property(e => e.CreatedAt).HasColumnType("timestamp");
-            entity.Property(e => e.ExpriedDate).HasColumnType("timestamp");
+            entity.Property(e => e.ExpiredDate).HasColumnType("timestamp");
         });
 
         modelBuilder.Entity<Category>(entity =>
@@ -94,19 +94,16 @@ public partial class EXE2_DineinEasyContext : DbContext
             entity.ToTable("Category");
             entity.Property(e => e.Description).IsRequired();
             entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
+       
         });
 
         modelBuilder.Entity<Customer>(entity =>
         {
             entity.ToTable("Customer");
-            entity.Property(e => e.CreateAt).HasColumnType("timestamp");
-            entity.Property(e => e.UpdatedAt).HasColumnType("timestamp");
-            entity.Property(e => e.DateOfBirth).HasColumnType("timestamp");
-            entity.Property(e => e.Email).IsRequired();
-            entity.Property(e => e.ImageUrl).IsRequired();
-            entity.Property(e => e.Name).IsRequired();
-            entity.Property(e => e.Password).IsRequired().HasMaxLength(20);
-            entity.Property(e => e.Phone).IsRequired().HasMaxLength(12);
+            entity.Property(e=>e.Id).HasColumnName("Id").HasDefaultValueSql("uuid_generate_v4()");
+            entity.Property(e => e.CreatedAt).HasColumnType("timestamptz");
+            entity.Property(e => e.UpdatedAt).HasColumnType("timestamptz");
+            entity.Property(e => e.DateOfBirth).HasColumnType("date");
             entity.Property(e => e.Status).HasColumnName("Status");
         });
 
@@ -130,7 +127,7 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("OrderBooking");
             entity.Property(e => e.BookingDate).HasColumnType("timestamp"); 
-            entity.Property(e => e.BookingTime).HasColumnType("timestamp");
+            entity.Property(e => e.BookingTime).HasColumnType("time");
             entity.Property(e => e.CreatedAt).HasColumnType("timestamp");
 
             entity.HasOne(d => d.Customer).WithMany(p => p.OrderBookings)
@@ -165,7 +162,7 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<Package>(entity =>
         {
             entity.ToTable("Package");
-            entity.Property(e => e.CreateAt).HasColumnType("timestamp");
+            entity.Property(e => e.CreatedAt).HasColumnType("timestamp");
             entity.Property(e => e.Description).IsRequired();
             entity.Property(e => e.ImageUrl).IsRequired();
             entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
@@ -208,7 +205,7 @@ public partial class EXE2_DineinEasyContext : DbContext
         {
             entity.ToTable("Review");
             entity.Property(e => e.Content).IsRequired();
-            entity.Property(e => e.CreateAt).HasColumnType("timestamp");
+            entity.Property(e => e.CreatedAt).HasColumnType("timestamp");
             entity.Property(e => e.Status).HasColumnName("status");
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Reviews)

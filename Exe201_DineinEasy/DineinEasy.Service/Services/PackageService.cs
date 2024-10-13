@@ -33,7 +33,7 @@ namespace DineinEasy.Service.Services
         {
             var obj = _mapper.Map<Package>(model);
             obj.Status = true;
-            obj.CreateAt = DateTime.Now;
+            obj.CreatedAt = DateTime.Now;
             var created = await _unitOfWork.PackageRepository.CreateAsync(obj);
             var result = _mapper.Map<PackageModel>(created);
             return new BusinessResult(200, "Create successfully", result);

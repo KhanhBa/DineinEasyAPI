@@ -8,7 +8,7 @@
 
         public string ImageUrl { get; set; }
 
-        public int ValueDays { get; set; }
+        public int ValidDays { get; set; }
 
         public double Price { get; set; }
 

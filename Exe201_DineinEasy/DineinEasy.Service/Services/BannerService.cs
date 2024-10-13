@@ -34,7 +34,7 @@ namespace DineinEasy.Service.Services
             var obj = _mapper.Map<Banner>(model);
             obj.Status = true;
             obj.CreatedAt = DateTime.Now;
-            obj.ExpriedDate = DateTime.Now.AddDays(7);
+            obj.ExpiredDate = DateTime.Now.AddDays(7);
             var created = await _unitOfWork.BannerRepository.CreateAsync(obj);
             var result = _mapper.Map<BannerModel>(created);
             return new BusinessResult(200, "Create successfully", result);
@@ -69,7 +69,7 @@ namespace DineinEasy.Service.Services
         {
             var obj = await _unitOfWork.BannerRepository.GetByIdAsync(Id);
             if (obj == null) { return new BusinessResult(404, "Can not find Banner"); }
-            model.ExpriedDate = obj.ExpriedDate;
+            model.ExpiredDate = obj.ExpiredDate;
             model.CreatedAt = obj.CreatedAt;
             _mapper.Map(model, obj);
             var updated = await _unitOfWork.BannerRepository.UpdateAsync(obj);

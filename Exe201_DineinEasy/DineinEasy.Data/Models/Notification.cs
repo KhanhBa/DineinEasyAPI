@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DineinEasy.Data.Models;
 
@@ -19,7 +20,7 @@ public partial class Notification
 
     public DateTime CreatedAt { get; set; }
 
-    public int CustomerId { get; set; }
-
+    public Guid CustomerId { get; set; }
+    [ForeignKey(nameof(CustomerId))]
     public virtual Customer Customer { get; set; }
 }

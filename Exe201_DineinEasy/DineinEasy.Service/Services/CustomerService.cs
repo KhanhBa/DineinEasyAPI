@@ -17,12 +17,12 @@ namespace DineinEasy.Service.Services
     public interface ICustomerService
     {
         Task<IBusinessResult> CreateCustomer(CustomerModel model);
-        Task<IBusinessResult> UpdateCustomer(CustomerModel customer, int id);
-        Task<IBusinessResult> DeleteCustomer(int id);
+        Task<IBusinessResult> UpdateCustomer(CustomerModel customer, Guid id);
+        Task<IBusinessResult> DeleteCustomer(Guid id);
         Task<IBusinessResult> GetAllCustomers();
-        Task<IBusinessResult> GetCustomerById(int id);
+        Task<IBusinessResult> GetCustomerById(Guid id);
         Task<IBusinessResult> SignIn(string email, string password);
-        Task<IBusinessResult> ChangeStatus(int status, int id);
+        Task<IBusinessResult> ChangeStatus(int status, Guid id);
         Task<IBusinessResult> DashboardCustomer();
     }
     public class CustomerService : ICustomerService
@@ -39,13 +39,14 @@ namespace DineinEasy.Service.Services
         {
             var obj = _mapper.Map<Customer>(model);
             obj.Status = true;
-            obj.CreateAt = DateTime.Now;
+            obj.CreatedAt = DateTime.Now;
+            obj.UpdatedAt = DateTime.Now;
             var created = await _unitOfWork.CustomerRepository.CreateAsync(obj);
             var result = _mapper.Map<CustomerModel>(created);
             return new BusinessResult(200, "Create successfully", result);
         }
 
-        public async Task<IBusinessResult> DeleteCustomer(int id)
+        public async Task<IBusinessResult> DeleteCustomer(Guid id)
         {
             var obj = await _unitOfWork.CustomerRepository.GetByIdAsync(id);
             if (obj == null)
@@ -62,7 +63,7 @@ namespace DineinEasy.Service.Services
             return result;
         }
 
-        public async Task<IBusinessResult> GetCustomerById(int id)
+        public async Task<IBusinessResult> GetCustomerById(Guid id)
         {
             var obj = await _unitOfWork.CustomerRepository.GetByIdAsync(id);
             if (obj == null)
@@ -71,12 +72,12 @@ namespace DineinEasy.Service.Services
             return new BusinessResult(200, "Get Customer by Id successfully", result);
         }
 
-        public async Task<IBusinessResult> UpdateCustomer(CustomerModel customer, int id)
+        public async Task<IBusinessResult> UpdateCustomer(CustomerModel customer, Guid id)
         {
             var obj = await _unitOfWork.CustomerRepository.GetByIdAsync(id);
             if (obj == null) { return new BusinessResult(404, "Can not find Customer"); }
   
-            customer.CreateAt = obj.CreateAt;
+            customer.UpdatedAt = DateTime.Now.Date;
             _mapper.Map(customer, obj);
             var updated = await _unitOfWork.CustomerRepository.UpdateAsync(obj);
             var result = _mapper.Map<CustomerModel>(obj);
@@ -112,8 +113,8 @@ namespace DineinEasy.Service.Services
                 };
             var customer = customers.FirstOrDefault();
 
-            JwtSecurityToken accessJwtSecurityToken = JWTHelper.GetToken("CUSTOMER", customer.Id, customer.Name, customer.Email, 1);
-            JwtSecurityToken refreshJwtSecurityToken = JWTHelper.GetToken("CUSTOMER", customer.Id, customer.Name, customer.Email, 3);
+            JwtSecurityToken accessJwtSecurityToken = JWTHelper.GetToken("CUSTOMER", null, customer.Name, customer.Email, 1, customer.Id);
+            JwtSecurityToken refreshJwtSecurityToken = JWTHelper.GetToken("CUSTOMER", null, customer.Name, customer.Email, 3, customer.Id);
 
             SignInModel<CustomerModel> signInModel = new SignInModel<CustomerModel>()
             {
@@ -130,7 +131,7 @@ namespace DineinEasy.Service.Services
 
         }
 
-        public async Task<IBusinessResult> ChangeStatus(int status, int id)
+        public async Task<IBusinessResult> ChangeStatus(int status, Guid id)
         {
             var obj = await _unitOfWork.CustomerRepository.GetByIdAsync(id);
             if (obj == null) { return new BusinessResult(404, "Can not find Customer"); }
@@ -146,5 +147,7 @@ namespace DineinEasy.Service.Services
             var obj = await _unitOfWork.CustomerRepository.GetNewCustomers();
             return new BusinessResult(200, "Get Dashboard Successfully", obj);
         }
+
+
     }
 }

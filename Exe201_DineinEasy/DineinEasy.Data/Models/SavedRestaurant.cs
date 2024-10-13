@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DineinEasy.Data.Models;
 
@@ -9,10 +10,11 @@ public partial class SavedRestaurant
 {
     public int Id { get; set; }
 
-    public int CustmerId { get; set; }
+    public Guid CustmerId { get; set; }
 
     public int RestaurantId { get; set; }
 
+    [ForeignKey(nameof(CustmerId))]
     public virtual Customer Custmer { get; set; }
 
     public virtual Restaurant Restaurant { get; set; }

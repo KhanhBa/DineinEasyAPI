@@ -12,7 +12,7 @@ namespace DineinEasy.Service.Untils
 {
     public static class JWTHelper
     {
-        public static JwtSecurityToken GetToken(string role ,int id, string name , string email, int day)
+        public static JwtSecurityToken GetToken(string role ,int? id, string name , string email, int day, Guid? guid)
         {
             string jwtKey = Environment.GetEnvironmentVariable("JWT_KEY");
             string audience = Environment.GetEnvironmentVariable("AUDIENCE");
@@ -26,9 +26,11 @@ namespace DineinEasy.Service.Untils
             {
                  new Claim(ClaimTypes.Name, name),
                  new Claim(ClaimTypes.Email, email),
-                 new Claim(ClaimTypes.NameIdentifier, id.ToString()),
                  new Claim(ClaimTypes.Role, role),
             };
+
+            if(id.HasValue) authClaims.Add(new Claim(ClaimTypes.NameIdentifier, id.Value.ToString()));
+            else if(guid.HasValue) authClaims.Add(new Claim(ClaimTypes.NameIdentifier, guid.Value.ToString()));
 
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
 

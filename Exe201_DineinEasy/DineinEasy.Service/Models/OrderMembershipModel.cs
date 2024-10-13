@@ -12,7 +12,7 @@ public partial class OrderMembershipModel
 
     public DateTime CreatedDate { get; set; }
 
-    public int ValueDays { get; set; }
+    public int ValidDays { get; set; }
 
     public string Name { get; set; }
 

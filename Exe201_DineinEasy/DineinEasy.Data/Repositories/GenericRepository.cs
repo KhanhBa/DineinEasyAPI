@@ -134,12 +134,12 @@ namespace DineinEasy.Data.Repositories
             return true;
         }
 
-        public T GetById(int id)
+        public T GetById(object id)
         {
             return _context.Set<T>().Find(id);
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(object id)
         {
             return await _context.Set<T>().FindAsync(id);
         }

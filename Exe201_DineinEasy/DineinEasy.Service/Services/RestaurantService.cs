@@ -121,8 +121,8 @@ namespace DineinEasy.Service.Services
                     };
                 var restaurant = restaurants.FirstOrDefault();
 
-                JwtSecurityToken accessJwtSecurityToken = JWTHelper.GetToken("RESTAURANT", restaurant.Id, restaurant.Name, restaurant.Email, 1);
-                JwtSecurityToken refreshJwtSecurityToken = JWTHelper.GetToken("RESTAURANT", restaurant.Id, restaurant.Name, restaurant.Email, 3);
+                JwtSecurityToken accessJwtSecurityToken = JWTHelper.GetToken("RESTAURANT", restaurant.Id, restaurant.Name, restaurant.Email, 1,null);
+                JwtSecurityToken refreshJwtSecurityToken = JWTHelper.GetToken("RESTAURANT", restaurant.Id, restaurant.Name, restaurant.Email, 3,null);
 
                 SignInModel<RestaurantModel> signInModel = new SignInModel<RestaurantModel>()
                 {

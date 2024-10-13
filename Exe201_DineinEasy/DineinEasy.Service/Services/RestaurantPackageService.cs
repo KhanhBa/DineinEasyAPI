@@ -41,11 +41,11 @@ namespace DineinEasy.Service.Services
             obj.Name = package.Name;
             obj.Description = package.Description;
             obj.CreatedDate = DateTime.Now;
-            obj.ValueDays = package.ValueDays;
+            obj.ValidDays = package.ValidDays;
             obj.ImageUrl = package.ImageUrl;
             obj.Price = package.Price;
             obj.Discount = package.Discount;
-            obj.ExpiredDate = DateTime.Now.AddDays(package.ValueDays);
+            obj.ExpiredDate = DateTime.Now.AddDays(package.ValidDays);
             var created = await _unitOfWork.OrderMembershipRepository.CreateAsync(obj);
             var result = _mapper.Map<OrderMembershipModel>(created);
             return new BusinessResult(200, "Create successfully", result);

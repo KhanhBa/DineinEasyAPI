@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DineinEasy.Data.Models;
 
@@ -13,14 +14,14 @@ public partial class Review
 
     public string Content { get; set; }
 
-    public DateTime CreateAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
-    public int CustomerId { get; set; }
+    public Guid CustomerId { get; set; }
 
     public int RestaurantId { get; set; }
 
     public bool Status { get; set; }
-
+    [ForeignKey(nameof(CustomerId))]
     public virtual Customer Customer { get; set; }
 
     public virtual Restaurant Restaurant { get; set; }

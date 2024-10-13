@@ -35,7 +35,7 @@ namespace DineinEasy.API.Controllers
         {
             try
             {
-                var obj = new PackageModel { Name = dto.Name, Description = dto.Description,Discount = dto.Discount,ValueDays=dto.ValueDays,ImageUrl= dto.ImageUrl,Price=dto.Price};
+                var obj = new PackageModel { Name = dto.Name, Description = dto.Description,Discount = dto.Discount,ValidDays=dto.ValidDays,ImageUrl= dto.ImageUrl,Price=dto.Price};
                 var result = await _packageService.CreatePackage(obj);
                 return StatusCode(result.Status, result);
             }
@@ -49,7 +49,7 @@ namespace DineinEasy.API.Controllers
         {
             try
             {
-                var obj = new PackageModel { Name = dto.Name, Description = dto.Description, Status = dto.Status, Discount = dto.Discount, ValueDays = dto.ValueDays, ImageUrl = dto.ImageUrl, Price = dto.Price};
+                var obj = new PackageModel { Name = dto.Name, Description = dto.Description, Status = dto.Status, Discount = dto.Discount, ValidDays = dto.ValidDays, ImageUrl = dto.ImageUrl, Price = dto.Price};
                 var result = await _packageService.UpdatePackagey(id, obj);
                 return StatusCode(result.Status, result);
             }

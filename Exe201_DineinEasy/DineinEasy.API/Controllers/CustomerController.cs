@@ -46,7 +46,7 @@ namespace DineinEasy.API.Controllers
             }
         }
         [HttpPut("customers/{id}")]
-        public async Task<ActionResult<IBusinessResult>> Update([FromBody] UpdatedCustomer dto, [FromRoute] int id)
+        public async Task<ActionResult<IBusinessResult>> Update([FromBody] UpdatedCustomer dto, [FromRoute] Guid id)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace DineinEasy.API.Controllers
         }
 
         [HttpPut("customers/{id}/status/{status}")]
-        public async Task<ActionResult<IBusinessResult>> Update([FromRoute] int status, [FromRoute] int id)
+        public async Task<ActionResult<IBusinessResult>> Update([FromRoute] int status, [FromRoute] Guid id)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace DineinEasy.API.Controllers
 
 
         [HttpGet("customers/{id}")]
-        public async Task<ActionResult<IBusinessResult>> GetByid([FromRoute] int id)
+        public async Task<ActionResult<IBusinessResult>> GetByid([FromRoute] Guid id)
         {
             try
             {
@@ -91,7 +91,7 @@ namespace DineinEasy.API.Controllers
             }
         }
         [HttpDelete("customers/{id}")]
-        public async Task<ActionResult<IBusinessResult>> DeleteByid([FromRoute] int id)
+        public async Task<ActionResult<IBusinessResult>> DeleteByid([FromRoute] Guid id)
         {
             try
             {

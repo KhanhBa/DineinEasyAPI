@@ -83,7 +83,7 @@ namespace DineinEasy.API.Controllers
             try
             {
                 var obj = new OrderMembershipModel();
-                obj.ValueDays = model.ValueDays;
+                obj.ValidDays = model.ValidDays;
                 obj.ExpiredDate = model.ExpiredDate;
                 obj.Name = model.Name;
                 obj.Description = model.Description;

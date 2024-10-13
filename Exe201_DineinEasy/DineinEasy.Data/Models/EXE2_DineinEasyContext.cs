@@ -15,10 +15,10 @@ public partial class EXE2_DineinEasyContext : DbContext
     {
     }
 
-    string user =/* Environment.GetEnvironmentVariable("DB_USER");*/  "postgres.jkpkuxfzllblbvmogkxo";
-    string pass = /*Environment.GetEnvironmentVariable("DB_PASSWORD");*/ "lequockhanh@503";
-    string serverName = /*Environment.GetEnvironmentVariable("DB_SERVER");*/ "aws-0-ap-southeast-1.pooler.supabase.com";
-    string dbName = /*Environment.GetEnvironmentVariable("DB_NAME");*/ "postgres";
+    string user = Environment.GetEnvironmentVariable("DB_USER");
+    string pass = Environment.GetEnvironmentVariable("DB_PASSWORD"); 
+    string serverName = Environment.GetEnvironmentVariable("DB_SERVER");
+    string dbName = Environment.GetEnvironmentVariable("DB_NAME"); 
 
     public EXE2_DineinEasyContext() { }
 

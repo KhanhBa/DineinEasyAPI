@@ -33,7 +33,7 @@ namespace DineinEasy.API.Controllers
         {
             try
             {
-                var obj = new BannerModel {ImageUrl = Dto.ImageUrl};
+                var obj = new BannerModel {ImageUrl = Dto.ImageUrl,RestaurantId=Dto.RestaurantId};
                 var result = await _bannerService.CreateBanner(obj);
                 return StatusCode(result.Status, result);
             }
@@ -47,7 +47,7 @@ namespace DineinEasy.API.Controllers
         {
             try
             {
-                var obj = new BannerModel {ImageUrl = Dto.ImageUrl,Status=Dto.Status};
+                var obj = new BannerModel {ImageUrl = Dto.ImageUrl,Status=Dto.Status, RestaurantId = Dto.RestaurantId };
                 var result = await _bannerService.UpdateBanner(id, obj);
                 return StatusCode(result.Status, result);
             }

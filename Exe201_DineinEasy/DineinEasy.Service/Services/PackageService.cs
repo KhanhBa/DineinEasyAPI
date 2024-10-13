@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace DineinEasy.Service.Services
 {
     public interface IPackageService
-    {
+    {   
         Task<IBusinessResult> GetAllPackage();
         Task<IBusinessResult> CreatePackage(PackageModel model);
         Task<IBusinessResult> UpdatePackagey(int Id, PackageModel model);

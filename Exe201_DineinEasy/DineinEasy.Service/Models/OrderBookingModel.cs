@@ -22,7 +22,4 @@ public partial class OrderBookingModel
 
     public bool? Status { get; set; }
 
-    public virtual CustomerModel Customer { get; set; }
-
-    public virtual RestaurantModel Restaurant { get; set; }
 }

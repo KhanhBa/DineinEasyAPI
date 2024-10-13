@@ -26,6 +26,7 @@ namespace DineinEasy.Data.UnitOfWork
         private AreaRepository _area;
         private BannerRepository _banner;
         private RestaurantImageRepository _restaurantImage;
+        private PackagerRestaurantRepository _packagerRestaurant;
 
         public UnitOfWork()
         {
@@ -139,6 +140,13 @@ namespace DineinEasy.Data.UnitOfWork
             get
             {
                 return _banner ??= new BannerRepository();
+            }
+        }
+        public PackagerRestaurantRepository PackagerRestaurantRepository
+        {
+            get
+            {
+                return _packagerRestaurant ??= new PackagerRestaurantRepository();
             }
         }
     }

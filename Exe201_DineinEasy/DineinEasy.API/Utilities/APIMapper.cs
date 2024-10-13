@@ -25,7 +25,7 @@ namespace DineinEasy.API.Utilities
             CustomerProfile();
             ReviewProfile();
             OrderBookingProfile();
-
+            RestaurantPackageProfile();
         }
 
         public void OrderBookingProfile()
@@ -136,6 +136,10 @@ namespace DineinEasy.API.Utilities
         public void ImageRestaurantProfile()
         {
             CreateMap<RestaurantImage,RestaurantImageModel>().ReverseMap();
+        }
+        public void RestaurantPackageProfile()
+        {
+            CreateMap<OrderMembership, OrderMembershipModel>().ReverseMap();
         }
     }
 }

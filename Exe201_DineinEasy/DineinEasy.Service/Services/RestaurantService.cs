@@ -31,6 +31,7 @@ namespace DineinEasy.Service.Services
         Task<IBusinessResult> GetImagesByRestaurantId(int id);
         Task<IBusinessResult> ChangeImageRestaurant(int restaurantId , List<RestaurantImageModel> list);
         Task<IBusinessResult> ChangeStatus(int id, int status);
+        Task<IBusinessResult> UpdateRestaurantPartner(RestaurantUpdatePartner obj, int id);
     }
     public class RestaurantService : IRestaurantService
     {
@@ -206,6 +207,20 @@ namespace DineinEasy.Service.Services
                 result.Add(_mapper.Map<RestaurantImageModel>(newObj));
             }
             _unitOfWork.RestaurantRepository.Save();
+            return new BusinessResult(200, "Change successfully", result);
+        }
+
+        public async Task<IBusinessResult> UpdateRestaurantPartner(RestaurantUpdatePartner obj, int id)
+        {
+            var restaurant = await _unitOfWork.RestaurantRepository.GetByIdAsync(id);
+            restaurant.Name = obj.Name;
+            restaurant.Address = obj.Address;
+            restaurant.Latitude = obj.Latitude;
+            restaurant.Longitude = obj.Longtitude;
+            restaurant.Description = obj.Description;
+            restaurant.Avatar = obj.AvatarUrl;
+            var updated = await _unitOfWork.RestaurantRepository.UpdateAsync(restaurant);
+            var result = _mapper.Map<RestaurantPartner>(restaurant);
             return new BusinessResult(200, "Change successfully", result);
         }
     }

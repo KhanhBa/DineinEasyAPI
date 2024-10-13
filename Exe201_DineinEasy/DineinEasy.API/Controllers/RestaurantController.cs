@@ -6,6 +6,7 @@ using DineinEasy.Service.Models;
 using DineinEasy.Service.Responses;
 using DineinEasy.Service.Services;
 using Microsoft.AspNetCore.Mvc;
+using static DineinEasy.Service.Models.PartnerModels.PartnerModel;
 
 namespace DineinEasy.API.Controllers
 {
@@ -193,5 +194,18 @@ namespace DineinEasy.API.Controllers
                     return StatusCode(500, ex.Message);
                 }
             }
+        [HttpPut("restaurants/{id}/partners")]
+        public async Task<ActionResult<IBusinessResult>> UpdatePartner([FromBody] RestaurantUpdatePartner dto, [FromRoute] int id)
+        {
+            try
+            {
+                var result = await _restaurantService.UpdateRestaurantPartner(dto, id);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return Ok(ex.Message);
+            }
         }
+    }
     }

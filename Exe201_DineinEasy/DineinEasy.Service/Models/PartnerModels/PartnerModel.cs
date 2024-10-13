@@ -60,5 +60,14 @@ namespace DineinEasy.Service.Models.PartnerModels
             public TimeOnly GetOpenedTime() => TimeOnly.Parse(OpenedTime);
             public TimeOnly GetClosedTime() => TimeOnly.Parse(ClosedTime);
         }
+        public class RestaurantUpdatePartner
+        {
+            public string Name { get; set; }
+            public string Address { get; set; }
+            public double Latitude { get; set; }
+            public double Longtitude { get; set; }
+            public string Description { get; set; }
+            public string AvatarUrl { get; set; }
+        }
     }
 }

@@ -28,7 +28,7 @@
 
         public int AreaId { get; set; }
 
-        public List<CreatedImage> RestaurantImages {  get; set; }
+        public List<CreatedImage> RestaurantImages {  get; set; } = new List<CreatedImage> { };
     }
     public class CreatedImage
     {

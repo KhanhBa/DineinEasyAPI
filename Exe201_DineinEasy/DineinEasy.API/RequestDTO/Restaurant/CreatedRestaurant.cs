@@ -17,6 +17,8 @@
         public int NumberTable { get; set; }
 
         public string Email { get; set; }
+        public string Cuisine { get; set; } = "";
+        public string PriceRange { get; set; } = "$";
 
         public string Phone { get; set; }
 
@@ -28,7 +30,7 @@
 
         public int AreaId { get; set; }
 
-        public List<CreatedImage> RestaurantImages {  get; set; }
+        public List<CreatedImage> RestaurantImages {  get; set; } = new List<CreatedImage> { };
     }
     public class CreatedImage
     {

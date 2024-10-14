@@ -17,7 +17,8 @@ using static DineinEasy.Service.Models.PartnerModels.PartnerModel;
 namespace DineinEasy.Service.Services
 {
     public interface IRestaurantService
-    {
+    {  
+        Task<IBusinessResult> GetBookingOrdersByRestaurantId(int restaurantId);
         Task<IBusinessResult> CreateRestaurant(RestaurantModel model);
         Task<IBusinessResult> UpdateRestaurant(RestaurantModel restaurant,int id);
         Task<IBusinessResult> DeleteRestaurant(int id);
@@ -45,13 +46,19 @@ namespace DineinEasy.Service.Services
 
         public async Task<IBusinessResult> CreateRestaurant(RestaurantModel model)
         {
-            var obj = _mapper.Map<Restaurant>(model);
-            obj.Status = true;
-            obj.CreateAt = DateTime.Now;
-            obj.UpdateAt = DateTime.Now;
-            var created = await _unitOfWork.RestaurantRepository.CreateAsync(obj);
-            var result = _mapper.Map<RestaurantModel>(created);
-            return new BusinessResult(200, "Create successfully", result);
+            try
+            {
+                var obj = _mapper.Map<Restaurant>(model);
+                obj.Status = true;
+                obj.CreateAt = DateTime.Now;
+                obj.UpdateAt = DateTime.Now;
+                var created = await _unitOfWork.RestaurantRepository.CreateAsync(obj);
+                var result = _mapper.Map<RestaurantModel>(created);
+                return new BusinessResult(200, "Create successfully", result);
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<IBusinessResult> DeleteRestaurant(int id)
@@ -222,6 +229,14 @@ namespace DineinEasy.Service.Services
             var updated = await _unitOfWork.RestaurantRepository.UpdateAsync(restaurant);
             var result = _mapper.Map<RestaurantPartner>(restaurant);
             return new BusinessResult(200, "Change successfully", result);
+        }
+
+        public async  Task<IBusinessResult> GetBookingOrdersByRestaurantId(int restaurantId)
+        {
+            var list = await _unitOfWork.OrderBookingRepository.FindByConditionAsync(x=>x.RestaurantId==restaurantId);
+            var data = _mapper.Map<List<OrderBookingModel>>(list);
+            var result = new BusinessResult(200, "Get all booking orders by restaurant", data);
+            return result;
         }
     }
 }

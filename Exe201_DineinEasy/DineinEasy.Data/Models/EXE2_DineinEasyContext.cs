@@ -171,14 +171,8 @@ public partial class EXE2_DineinEasyContext : DbContext
         modelBuilder.Entity<Restaurant>(entity =>
         {
             entity.ToTable("Restaurant");
-            entity.Property(e => e.Address).IsRequired();
-            entity.Property(e => e.Avatar).IsRequired();
-            entity.Property(e => e.CreateAt).IsRequired().HasColumnType("timestamp");
-            entity.Property(e => e.Description).IsRequired();
-            entity.Property(e => e.Email).IsRequired();
-            entity.Property(e => e.Name).IsRequired();
-            entity.Property(e => e.Phone).IsRequired().HasMaxLength(50);
-            entity.Property(e => e.Tags).IsRequired();
+            entity.Property(e => e.CreateAt).HasColumnType("timestamp");
+            entity.Property(e => e.Phone).HasMaxLength(50);
             entity.Property(e => e.UpdateAt).HasColumnType("timestamp");
 
             entity.HasOne(d => d.Area).WithMany(p => p.Restaurants)

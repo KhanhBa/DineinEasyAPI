@@ -207,5 +207,18 @@ namespace DineinEasy.API.Controllers
                 return Ok(ex.Message);
             }
         }
+        [HttpGet("restaurants/{id}/booking-orders")]
+        public async Task<ActionResult<IBusinessResult>> GetBookingOrdersByRestaurantId([FromRoute] int id)
+        {
+            try
+            {
+                var result = await _restaurantService.GetBookingOrdersByRestaurantId(id);
+                return StatusCode(result.Status, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
     }

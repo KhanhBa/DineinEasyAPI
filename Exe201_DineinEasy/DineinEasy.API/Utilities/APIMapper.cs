@@ -9,6 +9,7 @@ using DineinEasy.API.RequestDTO.Customer;
 using DineinEasy.API.RequestDTO.PartnerDTO;
 using DineinEasy.Service.Models.PartnerModels;
 using static DineinEasy.Service.Models.PartnerModels.PartnerModel;
+using DineinEasy.API.RequestDTO.Banner;
 
 namespace DineinEasy.API.Utilities
 {
@@ -97,8 +98,10 @@ namespace DineinEasy.API.Utilities
         }
         public void BannerProfile()
         {
-            CreateMap<Banner, BannerModel>().ReverseMap()
+            CreateMap<Banner, BannerModel>().ReverseMap() .ForMember(dest => dest.RestaurantId, opt => opt.MapFrom(x=>x.RestaurantId))
                      .ForMember(dest => dest.Id, opt => opt.Ignore());
+            CreateMap<CreatedBanner, BannerModel>().ReverseMap().ForMember(dest => dest.RestaurantId, opt => opt.MapFrom(x => x.RestaurantId));
+            CreateMap<UpdatedBanner, BannerModel>().ReverseMap().ForMember(dest => dest.RestaurantId, opt => opt.MapFrom(x => x.RestaurantId));
         }
         public void TimeFrameProfile()
         {

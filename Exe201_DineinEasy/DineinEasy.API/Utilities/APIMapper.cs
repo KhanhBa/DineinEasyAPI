@@ -37,6 +37,7 @@ namespace DineinEasy.API.Utilities
      .ForPath(dest => dest.Name, opt => opt.MapFrom(src => src.Customer != null ? src.Customer.Name : string.Empty))
      .ForPath(dest => dest.Phone, opt => opt.MapFrom(src => src.Customer != null ? src.Customer.Phone : string.Empty))
      .ForMember(dest => dest.SpecialRequests, opt => opt.MapFrom(src => src.Note))
+     .ForMember(dest => dest.CustomerId,otp=>otp.MapFrom(src => src.NumberSeats))
      .ForMember(dest => dest.Time, opt => opt.MapFrom(src => src.BookingTime))
      .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.BookingDate))
      .ForMember(dest => dest.IsCheckin,otp =>otp.MapFrom(src =>src.Status));

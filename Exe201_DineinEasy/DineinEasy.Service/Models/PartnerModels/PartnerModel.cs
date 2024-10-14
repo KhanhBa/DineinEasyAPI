@@ -76,7 +76,7 @@ namespace DineinEasy.Service.Models.PartnerModels
             public string Phone { get; set; }
             public TimeSpan Time { get; set; }
             public DateTime Date { get; set; }
-            public Guid CustomerId { get; set; }
+            public int CustomerId { get; set; }
             public bool IsCheckin { get; set; }
             public string SpecialRequests { get; set; }
         }

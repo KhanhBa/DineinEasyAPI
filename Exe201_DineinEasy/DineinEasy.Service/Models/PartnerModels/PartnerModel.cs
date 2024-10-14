@@ -69,5 +69,15 @@ namespace DineinEasy.Service.Models.PartnerModels
             public string Description { get; set; }
             public string AvatarUrl { get; set; }
         }
+        public class OrderPartner
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public string Phone { get; set; }
+            public DateTime Time { get; set; }
+            public int CustometId { get; set; }
+            public bool IsCheckin { get; set; }
+            public string SpectialRequests { get; set; }
+        }
     }
 }

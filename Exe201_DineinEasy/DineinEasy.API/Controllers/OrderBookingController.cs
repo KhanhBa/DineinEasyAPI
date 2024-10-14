@@ -66,5 +66,18 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("partners/restaurants/{id}")]
+        public async Task<ActionResult<IBusinessResult>> GetPartnerOrderBookingByid([FromRoute] int id)
+        {
+            try
+            {
+                var result = await _orderBookingService.GetPartnerOrderBookingById(id);
+                return StatusCode(result.Status, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

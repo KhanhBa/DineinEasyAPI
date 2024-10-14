@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DineinEasy.Data.Models;
 using DineinEasy.Data.UnitOfWork;
 using DineinEasy.Service.Models;
 using DineinEasy.Service.Responses;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DineinEasy.Service.Models.PartnerModels.PartnerModel;
 
 namespace DineinEasy.Service.Services
 {   
@@ -16,6 +18,7 @@ namespace DineinEasy.Service.Services
 /*        Task<IBusinessResult> CreateOrderBooking(OrderBookingModel areaModel);
         Task<IBusinessResult> UpdateOrderBooking(int Id, OrderBookingModel areaModel);*/
         Task<IBusinessResult> GetOrderBookingById(int id);
+        Task<IBusinessResult> GetPartnerOrderBookingById(int id);
         /*     Task<IBusinessResult> DeleteOrderBookingbyId(int id);*/
         Task<IBusinessResult> GetDashBoardForAdmin();
         Task<IBusinessResult> GetDashBoardForPartner(int restaurantId);
@@ -58,6 +61,13 @@ namespace DineinEasy.Service.Services
             { return new BusinessResult(404, "Can not find OrderBooking"); }
             var result = _mapper.Map<OrderBookingModel>(area);
             return new BusinessResult(200, "Get order booking by Id successfully", result);
+        }
+
+        public async Task<IBusinessResult> GetPartnerOrderBookingById(int id)
+        {
+            List<OrderBooking> list = await _unitOfWork.OrderBookingRepository.GetOrderBookingsByRestaurantId(id);
+            var result = _mapper.Map<List<OrderPartner>>(list);
+            return new BusinessResult(200, "Get order booking by restaurantId successfully", result);
         }
     }
 }

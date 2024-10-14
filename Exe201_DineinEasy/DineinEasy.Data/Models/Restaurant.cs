@@ -44,6 +44,8 @@ public partial class Restaurant
     public double Rating { get; set; }
 
     public bool Status { get; set; }
+    public string Cuisine { get; set; } 
+    public string PriceRange { get; set; } 
 
     public int AreaId { get; set; }
 

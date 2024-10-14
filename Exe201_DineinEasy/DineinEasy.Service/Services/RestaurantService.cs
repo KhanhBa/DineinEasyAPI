@@ -46,13 +46,19 @@ namespace DineinEasy.Service.Services
 
         public async Task<IBusinessResult> CreateRestaurant(RestaurantModel model)
         {
-            var obj = _mapper.Map<Restaurant>(model);
-            obj.Status = true;
-            obj.CreateAt = DateTime.Now;
-            obj.UpdateAt = DateTime.Now;
-            var created = await _unitOfWork.RestaurantRepository.CreateAsync(obj);
-            var result = _mapper.Map<RestaurantModel>(created);
-            return new BusinessResult(200, "Create successfully", result);
+            try
+            {
+                var obj = _mapper.Map<Restaurant>(model);
+                obj.Status = true;
+                obj.CreateAt = DateTime.Now;
+                obj.UpdateAt = DateTime.Now;
+                var created = await _unitOfWork.RestaurantRepository.CreateAsync(obj);
+                var result = _mapper.Map<RestaurantModel>(created);
+                return new BusinessResult(200, "Create successfully", result);
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<IBusinessResult> DeleteRestaurant(int id)

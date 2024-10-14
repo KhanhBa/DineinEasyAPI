@@ -15,6 +15,8 @@
         public string Description { get; set; }
 
         public int NumberTable { get; set; }
+        public string Cuisine { get; set; } = "";
+        public string PriceRange { get; set; } = "$";
 
         public string Email { get; set; }
 

@@ -117,9 +117,9 @@ namespace DineinEasy.Service.Services
                         Status = 400
                     };
 
-                var restaurants = await _unitOfWork.RestaurantRepository.GetAllAsync(x => x.Email == email.ToLower().Trim() && x.Password == password);
+                var restaurants = await _unitOfWork.RestaurantRepository.FindByConditionAsync (x => x.Email == email && x.Password == password);
 
-                if (restaurants.Count == 0)
+                if (restaurants==null)
                     return new BusinessResult()
                     {
                         Data = null,

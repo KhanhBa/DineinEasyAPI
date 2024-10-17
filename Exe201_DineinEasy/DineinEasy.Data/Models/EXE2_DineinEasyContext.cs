@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Reflection.Emit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Polly;
+using Polly.Retry;
 
 namespace DineinEasy.Data.Models;
 
@@ -51,6 +53,23 @@ public partial class EXE2_DineinEasyContext : DbContext
     public virtual DbSet<TimeFrame> TimeFrames { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
+
+    private static readonly RetryPolicy retryPolicy = Policy
+        .Handle<Exception>()  
+        .WaitAndRetry(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
+        onRetry: (exception, retryCount, context) =>
+        {
+            Console.WriteLine($"Retry {retryCount} due to {exception.Message}");
+        });
+    public void ExecuteWithRetry(Action action)
+    {
+        retryPolicy.Execute(() => action());
+    }
+    public async Task<T> ExecuteWithRetryAsync<T>(Func<Task<T>> action)
+    {
+        var strategy = Database.CreateExecutionStrategy();
+        return await strategy.ExecuteAsync(() => action());
+    }
 
     public static string GetConnectionString(string connectionStringName)
     {

@@ -20,6 +20,7 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="9.0.0-rc.1" />
     <PackageReference Include="Npgsql.GeoJSON" Version="8.0.4" />
     <PackageReference Include="Npgsql.NetTopologySuite" Version="8.0.4" />
+    <PackageReference Include="Polly" Version="8.4.2" />
     <PackageReference Include="Supabase" Version="1.1.1" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0-rc.1" />
   </ItemGroup>

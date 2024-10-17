@@ -36,8 +36,6 @@ namespace DineinEasy.Service.Services
             obj.Status = true;
             var package = await _unitOfWork.PackageRepository.GetByIdAsync(packageModel.PackageId);
             if (package == null) { throw new Exception("Can not find package"); }
-            var restaurant = await _unitOfWork.RestaurantRepository.GetByIdAsync(packageModel.RestaurantId);
-            if (restaurant == null) { throw new Exception("Can not find restaurant"); }
             obj.Name = package.Name;
             obj.Description = package.Description;
             obj.CreatedDate = DateTime.Now;

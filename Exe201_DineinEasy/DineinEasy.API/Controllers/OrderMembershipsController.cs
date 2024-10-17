@@ -99,5 +99,6 @@ namespace DineinEasy.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        
     }
 }

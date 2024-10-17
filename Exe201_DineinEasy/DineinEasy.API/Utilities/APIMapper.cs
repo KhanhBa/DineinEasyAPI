@@ -13,9 +13,10 @@ using DineinEasy.API.RequestDTO.Banner;
 
 namespace DineinEasy.API.Utilities
 {
-    public class APIMapper:Profile
+    public class APIMapper : Profile
     {
-        public APIMapper() {
+        public APIMapper()
+        {
             RestaurantProfile();
             UserProfile();
             PackageProfile();
@@ -32,6 +33,16 @@ namespace DineinEasy.API.Utilities
         public void OrderBookingProfile()
         {
             CreateMap<OrderBooking, OrderBookingModel>().ReverseMap();
+            CreateMap<OrderBooking, OrderPartner>()
+     .ForPath(dest => dest.Name, opt => opt.MapFrom(src => src.Customer != null ? src.Customer.Name : string.Empty))
+     .ForPath(dest => dest.Phone, opt => opt.MapFrom(src => src.Customer != null ? src.Customer.Phone : string.Empty))
+     .ForMember(dest => dest.SpecialRequests, opt => opt.MapFrom(src => src.Note))
+     .ForMember(dest => dest.CustomerId,otp=>otp.MapFrom(src => src.NumberSeats))
+     .ForMember(dest => dest.Time, opt => opt.MapFrom(src => src.BookingTime))
+     .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.BookingDate))
+     .ForMember(dest => dest.IsCheckin,otp =>otp.MapFrom(src =>src.Status));
+
+            CreateMap<OrderPartner, OrderBooking>();
         }
         public void CustomerProfile()
         {
@@ -42,7 +53,7 @@ namespace DineinEasy.API.Utilities
         public void RestaurantProfile()
         {
             CreateMap<CreatedRestaurant, RestaurantModel>()
-                .ForMember(dest => dest.RestaurantImages, opt =>opt.MapFrom(x=>x.RestaurantImages))
+                .ForMember(dest => dest.RestaurantImages, opt => opt.MapFrom(x => x.RestaurantImages))
                 .ReverseMap();
             CreateMap<CreatedImage, RestaurantImageModel>()
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl))
@@ -98,7 +109,7 @@ namespace DineinEasy.API.Utilities
         }
         public void BannerProfile()
         {
-            CreateMap<Banner, BannerModel>().ReverseMap() .ForMember(dest => dest.RestaurantId, opt => opt.MapFrom(x=>x.RestaurantId))
+            CreateMap<Banner, BannerModel>().ReverseMap().ForMember(dest => dest.RestaurantId, opt => opt.MapFrom(x => x.RestaurantId))
                      .ForMember(dest => dest.Id, opt => opt.Ignore());
             CreateMap<CreatedBanner, BannerModel>().ReverseMap().ForMember(dest => dest.RestaurantId, opt => opt.MapFrom(x => x.RestaurantId));
             CreateMap<UpdatedBanner, BannerModel>().ReverseMap().ForMember(dest => dest.RestaurantId, opt => opt.MapFrom(x => x.RestaurantId));
@@ -127,18 +138,18 @@ namespace DineinEasy.API.Utilities
             CreateMap<UpdatedReview, ReviewModel>().ReverseMap();
             CreateMap<Review, ReviewPartner>()
                     .ForMember(dest => dest.imageUrls, opt => opt.MapFrom(src => src.ReviewImages))
-                    .ForPath(dest => dest.Name,otp => otp.MapFrom(src => src.Customer.Name))
+                    .ForPath(dest => dest.Name, otp => otp.MapFrom(src => src.Customer.Name))
                     .ForPath(dest => dest.Phone, otp => otp.MapFrom(src => src.Customer.Phone))
                     .ReverseMap()
                     ;
-                    
+
             CreateMap<ReviewImage, ImageReview>()
                 .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.ImageUrl));
-             
+
         }
         public void ImageRestaurantProfile()
         {
-            CreateMap<RestaurantImage,RestaurantImageModel>().ReverseMap();
+            CreateMap<RestaurantImage, RestaurantImageModel>().ReverseMap();
         }
         public void RestaurantPackageProfile()
         {

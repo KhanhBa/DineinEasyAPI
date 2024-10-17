@@ -37,5 +37,10 @@ namespace DineinEasy.Data.Repositories
                 ).ToListAsync();
             return data;
         }
+        public async Task<List<OrderBooking>> GetOrderBookingsByRestaurantId(int restaurantId)
+        {
+            return await _context.OrderBookings.Where(x => x.RestaurantId == restaurantId)
+                                 .Include(x => x.Customer).ToListAsync();
+        }
     }
 }
